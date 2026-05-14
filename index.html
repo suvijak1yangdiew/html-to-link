@@ -26,7 +26,39 @@ input,button,select{font-family:inherit}
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 input[type=number]{-moz-appearance:textfield}
-input[type=date]::-webkit-calendar-picker-indicator{filter:invert(0.6)}
+
+/* ── Mobile-friendly date input ── */
+.fi-inp[type="date"]{
+  -webkit-appearance:none;
+  appearance:none;
+  min-height:34px;
+  cursor:pointer;
+  position:relative;
+  display:block;
+  color:var(--t1);
+}
+/* ทำให้ทั้งช่อง input เป็นพื้นที่ tap → เปิดปฏิทินได้ทุกจุด (Chrome/Android) */
+.fi-inp[type="date"]::-webkit-calendar-picker-indicator{
+  position:absolute;
+  inset:0;
+  width:100%;height:100%;
+  padding:0;margin:0;
+  opacity:0;
+  cursor:pointer;
+  background:transparent;
+  -webkit-appearance:none;
+}
+/* แสดง placeholder เป็นสี medium grey เมื่อยังไม่ได้เลือก (iOS Safari) */
+.fi-inp[type="date"]:not(.has-value)::-webkit-datetime-edit{
+  color:var(--t3);
+}
+.fi-inp[type="date"].has-value::-webkit-datetime-edit{
+  color:var(--t1);
+}
+/* ให้ label แถวนี้คลิกได้ → เปิดปฏิทิน */
+.fi.date-row{cursor:pointer}
+.fi.date-row .fl{cursor:pointer}
+
 ::-webkit-scrollbar{width:0;height:0}
 
 /* ╔══════════════════════════════════════════════╗
@@ -858,10 +890,10 @@ function rCalc(){
           oninput="S.reqSavings=this.value;ss();uCalcOut()"/>
       </div><div class="fu">บาท</div>
     </div>
-    <div class="fi">
+    <div class="fi date-row" id="fi-salary-row">
       <div class="fm">
         <div class="fl"><span class="ic">📅</span>วันที่เงินเดือนเข้า</div>
-        <input id="inp-salaryDate" class="fi-inp sm" type="date" value="${S.salaryDate}" style="color:${S.salaryDate?'var(--t1)':'rgba(238,238,255,.15)'}"
+        <input id="inp-salaryDate" class="fi-inp sm${S.salaryDate?' has-value':''}" type="date" value="${S.salaryDate}"
           oninput="S.salaryDate=this.value;ss();uCalcOut()"/>
       </div>
       <div id="salary-days-badge">${autoD>0?`<div class="fi-days-badge">อีก ${autoD} วัน</div>`:''}</div>
@@ -886,6 +918,7 @@ function rCalc(){
   </div>`;
   el.innerHTML=h;
   uCalcOut();
+  bindDatePicker();
 }
 
 function uCalcOut(){
@@ -896,7 +929,7 @@ function uCalcOut(){
   const badge=$('salary-days-badge');
   if(badge) badge.innerHTML=autoD>0?`<div class="fi-days-badge">อีก ${autoD} วัน</div>`:'';
   const sdInp=$('inp-salaryDate');
-  if(sdInp) sdInp.style.color=S.salaryDate?'var(--t1)':'rgba(238,238,255,.15)';
+  if(sdInp) sdInp.classList.toggle('has-value', !!S.salaryDate);
   const c=C();
   const slv=safety(c.remBuf,c.spend,c.useTgt);
   const M=modes(c.daily);
@@ -1389,6 +1422,39 @@ function uSavOut(){
 /* ══════════════════════════════════════════════
    ACTIONS
 ══════════════════════════════════════════════ */
+
+/* Date picker binding for mobile — บังคับเปิดปฏิทินเมื่อ tap */
+function bindDatePicker(){
+  const inp = $('inp-salaryDate');
+  if(!inp || inp._dpBound) return;
+  inp._dpBound = true;
+
+  const openPicker = () => {
+    try{
+      if(typeof inp.showPicker === 'function'){
+        inp.showPicker();
+      }
+    }catch(_){
+      // ถ้า showPicker ไม่ได้รับ user gesture หรือไม่รองรับ ก็ปล่อยให้ native click ทำงาน
+    }
+  };
+
+  // tap ที่ตัว input → เปิดปฏิทิน
+  inp.addEventListener('click', openPicker);
+
+  // tap ที่ label / ไอคอน 📅 / พื้นที่ว่างในแถว → focus input แล้วเปิดปฏิทิน
+  const row = $('fi-salary-row');
+  if(row){
+    row.addEventListener('click', (e) => {
+      if(e.target === inp) return;                       // input คลิกเองอยู่แล้ว
+      if(e.target.closest('#salary-days-badge')) return; // ไม่ trigger จาก badge
+      e.preventDefault();
+      inp.focus();
+      openPicker();
+    });
+  }
+}
+
 function logS(){
   const amt=parseFloat($('la')?.value);
   if(isNaN(amt)||amt<=0){
