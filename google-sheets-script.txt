@@ -16,6 +16,14 @@ var PHOTO_FOLDER_NAME = "รูปใบเสร็จ (แอปงบวั�
 var HEADERS = ["รหัส", "วันที่", "เวลา", "จำนวนเงิน (บาท)", "บันทึก", "รูปใบเสร็จ", "จดเมื่อ"];
 var PHOTO_COLUMN = 6;
 
+// ปกติโค้ดผูกกับชีตที่เปิด Apps Script มา จึงเว้นว่างไว้ได้
+// ถ้าสร้างโค้ดแยกจากชีต ให้ใส่รหัสชีต (ตัวอักษรยาวๆ ในลิงก์ชีต ระหว่าง /d/ กับ /edit)
+var SPREADSHEET_ID = "";
+
+function getSpreadsheet_() {
+  return SpreadsheetApp.getActiveSpreadsheet() || SpreadsheetApp.openById(SPREADSHEET_ID);
+}
+
 // กด "เรียกใช้" ฟังก์ชันนี้ครั้งเดียวในหน้า Apps Script เพื่อให้ Google ขอสิทธิ์ใช้ Google Drive
 // และสร้างโฟลเดอร์รูปใบเสร็จไว้ล่วงหน้า
 function setupPhotoFolder() {
@@ -56,7 +64,7 @@ function doPost(e) {
 }
 
 function getSheet_() {
-  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  var spreadsheet = getSpreadsheet_();
   var sheet = spreadsheet.getSheetByName(SHEET_NAME) || spreadsheet.insertSheet(SHEET_NAME, 0);
   if (sheet.getLastRow() === 0) {
     sheet.setFrozenRows(1);
@@ -118,7 +126,7 @@ function deleteRow_(sheet, id) {
 
 // แท็บ "สรุปล่าสุด": ตัวเลขจากหน้าคำนวณ/เงินเก็บ เขียนทับทุกครั้ง
 function writeSummary_(pairs) {
-  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  var spreadsheet = getSpreadsheet_();
   var sheet = spreadsheet.getSheetByName(SUMMARY_NAME) || spreadsheet.insertSheet(SUMMARY_NAME);
   sheet.clearContents();
   var rows = [["หัวข้อ", "ค่า"]].concat(pairs).concat([["อัปเดตเมื่อ", new Date()]]);
