@@ -1,0 +1,167 @@
+/**
+ * งบวันนี้: รับข้อมูลจากแอปมาเก็บในชีตนี้ เป็นที่เก็บหลักฐานย้อนหลัง
+ * วิธีติดตั้งอยู่ในไฟล์ คู่มือ-google-sheets.md
+ *
+ * แอปส่งมาได้ 3 แบบ:
+ *   { ops: [{ op: "upsert", row }, { op: "delete", id }], summary: [[ชื่อ, ค่า], ...] }
+ *   { action: "uploadPhoto", id, date, type, data }   เก็บรูปใบเสร็จ (base64) ใน Google Drive
+ *   { action: "trashPhotos", fileIds: [...] }         ย้ายรูปที่เลิกใช้ไปถังขยะของ Drive
+ *
+ * รูปเก็บในโฟลเดอร์ "รูปใบเสร็จ (แอปงบวันนี้)" แบบส่วนตัว เปิดได้เฉพาะเจ้าของบัญชี
+ */
+
+var SHEET_NAME = "รายจ่าย";
+var SUMMARY_NAME = "สรุปล่าสุด";
+var PHOTO_FOLDER_NAME = "รูปใบเสร็จ (แอปงบวันนี้)";
+var HEADERS = ["รหัส", "วันที่", "เวลา", "จำนวนเงิน (บาท)", "บันทึก", "รูปใบเสร็จ", "จดเมื่อ"];
+var PHOTO_COLUMN = 6;
+
+// กด "เรียกใช้" ฟังก์ชันนี้ครั้งเดียวในหน้า Apps Script เพื่อให้ Google ขอสิทธิ์ใช้ Google Drive
+// และสร้างโฟลเดอร์รูปใบเสร็จไว้ล่วงหน้า
+function setupPhotoFolder() {
+  Logger.log("โฟลเดอร์รูปใบเสร็จ: " + getPhotoFolder_().getUrl());
+}
+
+// ใช้ตอนแอปทดสอบการเชื่อมต่อ
+function doGet() {
+  return json_({ ok: true, app: "ngob-wan-nee", photos: true });
+}
+
+function doPost(e) {
+  var lock = LockService.getScriptLock();
+  lock.waitLock(30000);
+  try {
+    var body = JSON.parse(e.postData.contents);
+    if (body.action === "uploadPhoto") return json_({ ok: true, fileId: uploadPhoto_(body) });
+    if (body.action === "trashPhotos") {
+      trashPhotos_(body.fileIds || []);
+      return json_({ ok: true });
+    }
+
+    var ops = body.ops || [];
+    if (ops.length > 0) {
+      var sheet = getSheet_();
+      ops.forEach(function (op) {
+        if (op.op === "delete") deleteRow_(sheet, op.id);
+        else if (op.op === "upsert") upsertRow_(sheet, op.row);
+      });
+    }
+    if (body.summary) writeSummary_(body.summary);
+    return json_({ ok: true });
+  } catch (error) {
+    return json_({ ok: false, error: String(error) });
+  } finally {
+    lock.releaseLock();
+  }
+}
+
+function getSheet_() {
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = spreadsheet.getSheetByName(SHEET_NAME) || spreadsheet.insertSheet(SHEET_NAME, 0);
+  if (sheet.getLastRow() === 0) {
+    sheet.setFrozenRows(1);
+    sheet.getRange(1, 1, 1, HEADERS.length).setFontWeight("bold");
+    sheet.getRange("A:A").setNumberFormat("@");
+    sheet.getRange("D:D").setNumberFormat("#,##0.00");
+  }
+  sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
+  return sheet;
+}
+
+function toValues_(row) {
+  return [
+    String(row.id),
+    row.date,
+    row.time || "",
+    Number(row.amount),
+    row.note || "",
+    "", // รูปใบเสร็จ เขียนแยกเป็นลิงก์ใน photoCell_
+    row.createdAt ? new Date(row.createdAt) : "",
+  ];
+}
+
+// ช่องรูป: ลิงก์ "ดูรูป" ถ้าส่งรูปแล้ว, "มี (กำลังส่งรูป)" ถ้ายังไม่ถึง, ว่างถ้าไม่มีรูป
+function photoCell_(row) {
+  if (row.photoUrl) {
+    return SpreadsheetApp.newRichTextValue().setText("ดูรูป").setLinkUrl(row.photoUrl).build();
+  }
+  return SpreadsheetApp.newRichTextValue().setText(row.hasPhoto ? "มี (กำลังส่งรูป)" : "").build();
+}
+
+// หาแถวจากรหัส; คืนเลขแถวในชีต หรือ 0 ถ้าไม่มี
+function findRow_(sheet, id) {
+  var last = sheet.getLastRow();
+  if (last < 2) return 0;
+  var ids = sheet.getRange(2, 1, last - 1, 1).getValues();
+  for (var i = 0; i < ids.length; i++) {
+    if (String(ids[i][0]) === String(id)) return i + 2;
+  }
+  return 0;
+}
+
+function upsertRow_(sheet, row) {
+  var values = toValues_(row);
+  var at = findRow_(sheet, row.id);
+  if (!at) {
+    sheet.appendRow(values);
+    at = sheet.getLastRow();
+  } else {
+    sheet.getRange(at, 1, 1, values.length).setValues([values]);
+  }
+  sheet.getRange(at, PHOTO_COLUMN).setRichTextValue(photoCell_(row));
+}
+
+function deleteRow_(sheet, id) {
+  var at = findRow_(sheet, id);
+  if (at) sheet.deleteRow(at);
+}
+
+// แท็บ "สรุปล่าสุด": ตัวเลขจากหน้าคำนวณ/เงินเก็บ เขียนทับทุกครั้ง
+function writeSummary_(pairs) {
+  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = spreadsheet.getSheetByName(SUMMARY_NAME) || spreadsheet.insertSheet(SUMMARY_NAME);
+  sheet.clearContents();
+  var rows = [["หัวข้อ", "ค่า"]].concat(pairs).concat([["อัปเดตเมื่อ", new Date()]]);
+  sheet.getRange(1, 1, rows.length, 2).setValues(rows);
+  sheet.getRange(1, 1, 1, 2).setFontWeight("bold");
+  sheet.setColumnWidth(1, 260);
+}
+
+// โฟลเดอร์รูปจำไว้ด้วยรหัส จึงย้ายหรือเปลี่ยนชื่อโฟลเดอร์ได้โดยไม่หลุด
+function getPhotoFolder_() {
+  var properties = PropertiesService.getScriptProperties();
+  var folderId = properties.getProperty("photoFolderId");
+  if (folderId) {
+    try {
+      var existing = DriveApp.getFolderById(folderId);
+      if (!existing.isTrashed()) return existing;
+    } catch (error) {
+      // โฟลเดอร์ถูกลบไปแล้ว สร้างใหม่
+    }
+  }
+  var folder = DriveApp.createFolder(PHOTO_FOLDER_NAME);
+  properties.setProperty("photoFolderId", folder.getId());
+  return folder;
+}
+
+function uploadPhoto_(body) {
+  var type = body.type || "image/jpeg";
+  var extension = type === "image/png" ? ".png" : ".jpg";
+  var name = (body.date || "") + "_" + body.id + extension;
+  var blob = Utilities.newBlob(Utilities.base64Decode(body.data), type, name);
+  return getPhotoFolder_().createFile(blob).getId();
+}
+
+function trashPhotos_(fileIds) {
+  fileIds.forEach(function (fileId) {
+    try {
+      DriveApp.getFileById(fileId).setTrashed(true);
+    } catch (error) {
+      // ไฟล์ถูกลบไปแล้ว ไม่ต้องทำอะไร
+    }
+  });
+}
+
+function json_(value) {
+  return ContentService.createTextOutput(JSON.stringify(value)).setMimeType(ContentService.MimeType.JSON);
+}
