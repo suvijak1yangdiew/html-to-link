@@ -1048,7 +1048,7 @@ function rHome(){
     h+=`<div class="sh">เงินเก็บ</div>
     <div style="background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);padding:14px 16px">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px">
-        <span style="font-size:.8rem;font-weight:700;color:var(--t2)">${ic('target')} เป้า ${fmt(sg,0)} ฿</span>
+        <span style="font-size:.8rem;font-weight:700;color:var(--t2)">${ic('target')} เป้าปีนี้ ${fmt(sg,0)} ฿</span>
         <span style="font-size:.8rem;font-weight:700;color:var(--g)">${sPct.toFixed(0)}%</span>
       </div>
       <div class="pt" style="height:9px;margin-bottom:7px">
@@ -1570,7 +1570,7 @@ function rSavings(){
   <div class="ip">
     <div class="fi">
       <div class="fm">
-        <div class="fl"><span class="ic">${ic('target')}</span>เป้าหมายเงินเก็บ/เดือน</div>
+        <div class="fl"><span class="ic">${ic('target')}</span>เป้าหมายเงินเก็บ/ปี</div>
         <input id="inp-savingGoal" class="fi-inp" type="number" value="${S.savingGoal}" placeholder="เช่น 10000" inputmode="decimal"
           oninput="S.savingGoal=this.value;ss();uSavOut();rHome()"/>
       </div><div class="fu">บาท</div>
@@ -1619,7 +1619,7 @@ function uPlan(){
       <div class="plan-tx"><div class="plan-nm">${nm}</div><div class="plan-ds">${ds}</div></div>
       <div class="plan-am"><div class="plan-v">${fW(v)} ฿</div><div class="plan-pc">${pc(v)}% · ต่อเดือน</div></div>
     </div>`;
-  const goalSet=Math.round(fN(S.savingGoal))===Math.round(P.save);
+  const goalSet=Math.round(fN(S.savingGoal))===Math.round(P.save*12);
   let h=`<div class="plan">
     <div class="plan-bar">
       <span style="flex:50;background:var(--vc)"></span>
@@ -1645,8 +1645,8 @@ function uPlan(){
       :`มีแล้ว ${fW(P.ef)} ฿ · ถ้าเก็บเดือนละ ${fW(P.emergency)} ฿ จะครบในอีกประมาณ <strong style="color:var(--t1)">${P.months} เดือน</strong>`}</div>
   </div>
   <button class="plan-btn ${goalSet?'done':''}" ${goalSet?'disabled':''} onclick="usePlanGoal()">${goalSet
-    ?`${ic('check')} เป้าเงินเก็บ/เดือนตรงกับแผนแล้ว`
-    :`${ic('target')} ตั้งเป้าเงินเก็บเดือนละ ${fW(P.save)} ฿ ตามแผน`}</button>
+    ?`${ic('check')} เป้าเงินเก็บ/ปีตรงกับแผนแล้ว`
+    :`${ic('target')} ตั้งเป้าเงินเก็บปีละ ${fW(P.save*12)} ฿ ตามแผน`}</button>
   <div class="tip">
     <span class="tip-i">${ic('bulb')}</span>
     <div class="tip-t"><strong>หลัก 50/30/20</strong> เป็นแนวทางจัดเงินที่ใช้กันทั่วโลก ส่วน<strong>เงินฉุกเฉิน</strong>ควรมี 3–6 เดือนของค่าใช้จ่ายจำเป็น แอปตั้งเป้าไว้ 6 เดือน เป็นตัวเลขแนะนำ ปรับตามชีวิตจริงได้</div>
@@ -1654,9 +1654,9 @@ function uPlan(){
   el.innerHTML=h;
 }
 
-// ส่วนออมรวม (เงินฉุกเฉิน + ออม) = เป้าเงินเก็บ/เดือน
+// ส่วนออมรวม (เงินฉุกเฉิน + ออม) × 12 เดือน = เป้าเงินเก็บ/ปี
 function usePlanGoal(){
-  S.savingGoal=String(Math.round(plan().save));
+  S.savingGoal=String(Math.round(plan().save*12));
   ss();
   const inp=$('inp-savingGoal'); if(inp) inp.value=S.savingGoal;
   uPlan(); uSavOut(); rHome();
@@ -1719,11 +1719,13 @@ function uSavOut(){
       }).join('')}
     </div>`;
   }
-  if(sg>0&&!over&&c.days>0){
-    const perDay=rem/c.days;
+  // เป้าเป็นรายปี: ต้องออมอีกเท่าไหร่ถึงจะครบภายในสิ้นปีนี้
+  if(sg>0&&!over){
+    const now=new Date(), mLeft=12-now.getMonth();
+    const dLeft=Math.max(1,Math.ceil((new Date(now.getFullYear(),11,31,23,59)-now)/86400000));
     out+=`<div class="tip" style="margin-top:4px">
       <span class="tip-i">${ic('bulb')}</span>
-      <div class="tip-t">ออมวันละ <strong>${fmt(perDay,0)} ฿</strong> จะถึงเป้าหมายพอดีภายใน <strong>${c.days} วัน</strong></div>
+      <div class="tip-t">ออมอีก<strong>เดือนละ ${fmt(rem/mLeft,0)} ฿</strong> (วันละ ${fmt(rem/dLeft,0)} ฿) จะถึงเป้าภายใน<strong>สิ้นปีนี้</strong> (อีก ${mLeft} เดือน)</div>
     </div>`;
   }
   if(over){
@@ -1990,7 +1992,7 @@ function sheetSummary(){
     ['งบใหม่ต่อวัน หลังหักที่ใช้ไป (บาท)', Math.round(t.newDaily)],
     ['ใช้ไปแล้วรอบนี้ (บาท)', t.total],
     ['เงินคงเหลือก่อนเงินเดือน (บาท)', Math.round(t.rem)],
-    ['เป้าเงินเก็บ (บาท)', fN(S.savingGoal)],
+    ['เป้าเงินเก็บต่อปี (บาท)', fN(S.savingGoal)],
     ['ออมแล้ว (บาท)', fN(S.savedAmount)],
   ].concat(P.sal>0?[
     ['เงินเดือน (บาท)', P.sal],
