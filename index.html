@@ -71,7 +71,7 @@ input[type=number]{-moz-appearance:textfield}
 /* ╔══════════════════════════════════════════════╗
    ║  DESIGN TOKENS                               ║
    ╚══════════════════════════════════════════════╝ */
-:root,[data-theme="original"],[data-theme="neon"],[data-theme="crimson"],[data-theme="violet"],[data-theme="galaxy"],[data-theme="racered"],[data-theme="raceyellow"]{
+:root,[data-theme="original"],[data-theme="neon"],[data-theme="crimson"],[data-theme="violet"],[data-theme="galaxy"],[data-theme="racered"],[data-theme="raceyellow"],[data-theme="halloween"],[data-theme="xmas"]{
   color-scheme:dark;
   /* Surfaces */
   --bg:      #091113;
@@ -305,6 +305,24 @@ input[type=number]{-moz-appearance:textfield}
   right:-24px;top:-12px;bottom:auto;width:170px;height:104px;border:none;box-shadow:none;border-radius:0;
   background:linear-gradient(115deg,transparent 0 34%,var(--vc) 34% 46%,transparent 46% 55%,var(--vc) 55% 61%,transparent 61%);opacity:.8}
 
+/* ธีมเทศกาล: Halloween + Christmas (วาดเอง) */
+[data-theme="halloween"]{
+  --bg:#120A1C; --s1:#1A1028; --s2:#21142F; --s3:#2B1A3D; --s4:#3A2352; --bar:rgba(26,16,40,0.9);
+  --vc:#F97316; --vl:#FDBA74; --vs:rgba(249,115,22,0.14); --vb:rgba(249,115,22,0.38); --on-acc:#1A0A00;
+  --t1:#FFF3E6; --t2:rgba(255,243,230,0.74); --t3:rgba(255,243,230,0.54); --ph:rgba(255,243,230,0.30);
+  --glow:radial-gradient(800px 400px at 50% -120px,rgba(249,115,22,0.14),transparent 70%); --hero:radial-gradient(120% 90% at 100% 0%,rgba(249,115,22,0.30) 0%,transparent 55%),linear-gradient(150deg,#3B1A55 0%,#21102F 55%,#120A1C 100%); --hero-lbl:#FDBA74; --hero-sub:#FDBA74; --hero-line:rgba(249,115,22,0.22);
+  --ring-b:none; --ring-s:none; --sh-v:0 10px 34px rgba(249,115,22,0.22);
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg transform='translate%2810 14%29 rotate%280%29 scale%280.85%29' opacity='0.38'%3E%3Cpath d='M15 4q1-4 4-4' stroke='%234ADE80' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='9' cy='14' rx='8' ry='9' fill='%23EA580C'/%3E%3Cellipse cx='23' cy='14' rx='8' ry='9' fill='%23EA580C'/%3E%3Cellipse cx='16' cy='14' rx='8' ry='10' fill='%23F97316'/%3E%3Cpath d='M9 11l3-3 3 3zM17 11l3-3 3 3z' fill='%232A1033'/%3E%3Cpath d='M8 16q8 7 16 0l-2.6 1.4-1.6-1.8-1.9 2-1.9-2-1.9 2-1.9-2-1.6 1.8z' fill='%232A1033'/%3E%3C/g%3E%3Cg transform='translate%2884 16%29 rotate%28-10%29 scale%281%29' opacity='0.3'%3E%3Cpath fill='%23A78BFA' d='M0 4C3 0 5 2 6 4 7 2 8 1 10 2 11 1 12 1 12 3 13 1 14 2 14 2 15 1 17 2 18 4 19 2 21 0 24 4 21 4 20 6 20 8 18 6 16 7 15 9 14 7 13 7 12 8 11 7 10 7 9 9 8 7 6 6 4 8 4 6 3 4 0 4Z'/%3E%3C/g%3E%3Cg transform='translate%2856 66%29 rotate%280%29 scale%281%29' opacity='0.22'%3E%3Cpath fill='%23F5F3FF' d='M0 16V7a7 7 0 0 1 14 0v9l-2.3-2-2.4 2-2.3-2-2.3 2-2.4-2z'/%3E%3Ccircle cx='4.6' cy='7' r='1.2' fill='%231E1030'/%3E%3Ccircle cx='9.4' cy='7' r='1.2' fill='%231E1030'/%3E%3C/g%3E%3Cg transform='translate%28104 92%29 rotate%2810%29 scale%280.7%29' opacity='0.32'%3E%3Cpath d='M15 4q1-4 4-4' stroke='%234ADE80' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='9' cy='14' rx='8' ry='9' fill='%23EA580C'/%3E%3Cellipse cx='23' cy='14' rx='8' ry='9' fill='%23EA580C'/%3E%3Cellipse cx='16' cy='14' rx='8' ry='10' fill='%23F97316'/%3E%3Cpath d='M9 11l3-3 3 3zM17 11l3-3 3 3z' fill='%232A1033'/%3E%3Cpath d='M8 16q8 7 16 0l-2.6 1.4-1.6-1.8-1.9 2-1.9-2-1.9 2-1.9-2-1.6 1.8z' fill='%232A1033'/%3E%3C/g%3E%3Cg transform='translate%2822 108%29 rotate%2825%29 scale%281%29' opacity='0.35'%3E%3Cpath fill='%23F472B6' d='M-9-4 -4 0 -9 4zM9-4 4 0 9 4z'/%3E%3Ccircle r='4.5' fill='%23F472B6'/%3E%3Cpath d='M-3-2.5l6 5' stroke='%23FFFFFF' stroke-width='1.2' opacity='.7'/%3E%3C/g%3E%3Cg transform='translate%28120 58%29 rotate%2812%29 scale%280.8%29' opacity='0.25'%3E%3Cpath fill='%23C4B5FD' d='M0 4C3 0 5 2 6 4 7 2 8 1 10 2 11 1 12 1 12 3 13 1 14 2 14 2 15 1 17 2 18 4 19 2 21 0 24 4 21 4 20 6 20 8 18 6 16 7 15 9 14 7 13 7 12 8 11 7 10 7 9 9 8 7 6 6 4 8 4 6 3 4 0 4Z'/%3E%3C/g%3E%3Ccircle cx='46' cy='40' r='1.4' fill='%23FDBA74' opacity='0.6'/%3E%3Ccircle cx='80' cy='128' r='1.2' fill='%23FDBA74' opacity='0.5'/%3E%3C/svg%3E"); --mascot:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='48' viewBox='0 0 52 48'%3E%3Cg transform='translate%288 10%29 rotate%280%29 scale%281.15%29' opacity='1'%3E%3Cpath d='M15 4q1-4 4-4' stroke='%234ADE80' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3Cellipse cx='9' cy='14' rx='8' ry='9' fill='%23EA580C'/%3E%3Cellipse cx='23' cy='14' rx='8' ry='9' fill='%23EA580C'/%3E%3Cellipse cx='16' cy='14' rx='8' ry='10' fill='%23F97316'/%3E%3Cpath d='M9 11l3-3 3 3zM17 11l3-3 3 3z' fill='%23FDE047'/%3E%3Cpath d='M8 16q8 7 16 0l-2.6 1.4-1.6-1.8-1.9 2-1.9-2-1.9 2-1.9-2-1.6 1.8z' fill='%23FDE047'/%3E%3C/g%3E%3Cg transform='translate%2828 0%29 rotate%28-10%29 scale%280.75%29' opacity='1'%3E%3Cpath fill='%23C4B5FD' d='M0 4C3 0 5 2 6 4 7 2 8 1 10 2 11 1 12 1 12 3 13 1 14 2 14 2 15 1 17 2 18 4 19 2 21 0 24 4 21 4 20 6 20 8 18 6 16 7 15 9 14 7 13 7 12 8 11 7 10 7 9 9 8 7 6 6 4 8 4 6 3 4 0 4Z'/%3E%3C/g%3E%3C/svg%3E");
+}
+[data-theme="xmas"]{
+  --bg:#0B1F16; --s1:#102A1E; --s2:#143325; --s3:#1B4030; --s4:#24513D; --bar:rgba(16,42,30,0.9);
+  --vc:#DC2626; --vl:#FCA5A5; --vs:rgba(220,38,38,0.14); --vb:rgba(220,38,38,0.38); --on-acc:#FFFFFF;
+  --t1:#F2FBF5; --t2:rgba(242,251,245,0.74); --t3:rgba(242,251,245,0.54); --ph:rgba(242,251,245,0.30);
+  --glow:radial-gradient(800px 400px at 50% -120px,rgba(255,255,255,0.08),transparent 70%); --hero:radial-gradient(120% 90% at 100% 0%,rgba(253,224,71,0.22) 0%,transparent 55%),linear-gradient(150deg,#1F5A3C 0%,#143825 55%,#0B1F16 100%); --hero-lbl:#FDE68A; --hero-sub:#FDE68A; --hero-line:rgba(220,38,38,0.22);
+  --ring-b:none; --ring-s:none; --sh-v:0 10px 34px rgba(220,38,38,0.22);
+  --pattern:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg transform='translate%2820 20%29 rotate%280%29 scale%281%29' opacity='0.35'%3E%3Cg stroke='%23FFFFFF' stroke-width='1.2' stroke-linecap='round' fill='none'%3E%3Cg transform='rotate%280%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%2860%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%28120%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%28180%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%28240%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%28300%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg transform='translate%2896 30%29 rotate%280%29 scale%280.8%29' opacity='0.4'%3E%3Cpath d='M12 0l7 9h-3l6 8h-4l6 8H0l6-8H2l6-8H5z' fill='%2322C55E'/%3E%3Crect x='10.5' y='25' width='3' height='4' fill='%2392400E'/%3E%3Ccircle cx='9' cy='12' r='1.3' fill='%23FDE047'/%3E%3Ccircle cx='15' cy='17' r='1.3' fill='%23EF4444'/%3E%3Ccircle cx='8' cy='21' r='1.3' fill='%2360A5FA'/%3E%3Cpath d='M12-4l1.2 2.5 2.7.3-2 1.8.6 2.7L12 2l-2.5 1.3.6-2.7-2-1.8 2.7-.3z' fill='%23FDE047'/%3E%3C/g%3E%3Cg transform='translate%2862 78%29 rotate%2820%29 scale%280.8%29' opacity='0.25'%3E%3Cg stroke='%23FFFFFF' stroke-width='1.2' stroke-linecap='round' fill='none'%3E%3Cg transform='rotate%280%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%2860%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%28120%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%28180%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%28240%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3Cg transform='rotate%28300%29'%3E%3Cpath d='M0 0V-9M0-5l-2.6-2.6M0-5l2.6-2.6'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3Cg transform='translate%2814 92%29 rotate%28-10%29 scale%280.8%29' opacity='0.45'%3E%3Cpath d='M4 22V6a4 4 0 0 1 8 0' fill='none' stroke='%23FFFFFF' stroke-width='3.2' stroke-linecap='round'/%3E%3Cpath d='M4 22V6a4 4 0 0 1 8 0' fill='none' stroke='%23EF4444' stroke-width='3.2' stroke-linecap='round' stroke-dasharray='2.4 2.4'/%3E%3C/g%3E%3Cg transform='translate%28108 100%29 rotate%288%29 scale%280.9%29' opacity='0.35'%3E%3Crect x='0' y='6' width='18' height='14' rx='1.5' fill='%23EF4444'/%3E%3Crect x='7.5' y='6' width='3' height='14' fill='%23FDE047'/%3E%3Crect x='0' y='11.5' width='18' height='3' fill='%23FDE047'/%3E%3Cpath d='M9 6C6 0 2 3 5 6M9 6c3-6 7-3 4 0' stroke='%23FDE047' stroke-width='1.8' fill='none'/%3E%3C/g%3E%3Cg transform='translate%2850 22%29 rotate%280%29 scale%280.6%29' opacity='0.4'%3E%3Cpath fill='%23FDE047' d='M10 0l2.9 6.6 7.1.6-5.4 4.7 1.6 7-6.2-3.7-6.2 3.7 1.6-7L0 7.2l7.1-.6z'/%3E%3C/g%3E%3Ccircle cx='80' cy='64' r='1.6' fill='%23FFFFFF' opacity='0.5'/%3E%3Ccircle cx='36' cy='128' r='1.3' fill='%23FFFFFF' opacity='0.5'/%3E%3Ccircle cx='128' cy='70' r='1.2' fill='%23FFFFFF' opacity='0.5'/%3E%3C/svg%3E"); --mascot:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='52' viewBox='0 0 48 52'%3E%3Cg transform='translate%2810 12%29 rotate%280%29 scale%281.15%29' opacity='1'%3E%3Cpath d='M12 0l7 9h-3l6 8h-4l6 8H0l6-8H2l6-8H5z' fill='%2322C55E'/%3E%3Crect x='10.5' y='25' width='3' height='4' fill='%2392400E'/%3E%3Ccircle cx='9' cy='12' r='1.3' fill='%23FDE047'/%3E%3Ccircle cx='15' cy='17' r='1.3' fill='%23EF4444'/%3E%3Ccircle cx='8' cy='21' r='1.3' fill='%2360A5FA'/%3E%3Cpath d='M12-4l1.2 2.5 2.7.3-2 1.8.6 2.7L12 2l-2.5 1.3.6-2.7-2-1.8 2.7-.3z' fill='%23FDE047'/%3E%3C/g%3E%3Cg transform='translate%2834 36%29 rotate%280%29 scale%280.75%29' opacity='1'%3E%3Crect x='0' y='6' width='18' height='14' rx='1.5' fill='%23EF4444'/%3E%3Crect x='7.5' y='6' width='3' height='14' fill='%23FDE047'/%3E%3Crect x='0' y='11.5' width='18' height='3' fill='%23FDE047'/%3E%3Cpath d='M9 6C6 0 2 3 5 6M9 6c3-6 7-3 4 0' stroke='%23FDE047' stroke-width='1.8' fill='none'/%3E%3C/g%3E%3C/svg%3E");
+}
+
 /* ╔══════════════════════════════════════════════╗
    ║  APP SHELL                                   ║
    ╚══════════════════════════════════════════════╝ */
@@ -328,7 +346,7 @@ input[type=number]{-moz-appearance:textfield}
 }
 #hdr-left{}
 #hdr-logo{
-  font-size:.8rem;font-weight:700;letter-spacing:.04em;
+  font-size:.88rem;font-weight:700;letter-spacing:.04em;
   color:var(--vl);display:flex;align-items:center;gap:7px;
 }
 #hdr-logo .mark{
@@ -339,12 +357,12 @@ input[type=number]{-moz-appearance:textfield}
 #hdr-logo .mark svg{width:14px;height:14px}
 #hdr-greet{font-size:1.05rem;font-weight:700;color:var(--t1);margin-top:3px}
 #hdr-right{text-align:right}
-#hdr-date{font-size:.78rem;color:var(--t2)}
+#hdr-date{font-size:.86rem;color:var(--t2)}
 #salary-chip{
   display:inline-flex;align-items:center;gap:4px;margin-top:4px;
   background:linear-gradient(var(--vs),var(--vs)),var(--s2);border:1px solid var(--vb);
   border-radius:20px;padding:4px 11px;
-  font-size:.74rem;font-weight:600;color:var(--vl);
+  font-size:.82rem;font-weight:600;color:var(--vl);
 }
 /* Content */
 #content{
@@ -386,7 +404,7 @@ input[type=number]{-moz-appearance:textfield}
 }
 .nb-ico svg{width:22px;height:22px}
 .nb.on .nb-ico{background:linear-gradient(var(--vs),var(--vs)),var(--s2)}
-.nb-lbl{font-size:.7rem;font-weight:600;letter-spacing:.01em}
+.nb-lbl{font-size:.78rem;font-weight:600;letter-spacing:.01em}
 .nb-dot{
   position:absolute;top:1px;right:10px;
   width:8px;height:8px;border-radius:50%;
@@ -402,7 +420,7 @@ input[type=number]{-moz-appearance:textfield}
 /* Section header */
 .sh{
   display:flex;align-items:center;gap:10px;
-  font-size:.74rem;font-weight:700;letter-spacing:.06em;
+  font-size:.82rem;font-weight:700;letter-spacing:.06em;
   color:var(--t2);
   margin:24px 0 10px;
 }
@@ -431,7 +449,7 @@ input[type=number]{-moz-appearance:textfield}
 }
 .hc>*,.shc>*{position:relative;z-index:1}
 .hc-lbl{
-  font-size:.78rem;font-weight:600;
+  font-size:.86rem;font-weight:600;
   letter-spacing:.03em;color:var(--hero-lbl);margin-bottom:8px;
 }
 .hc-val{
@@ -446,7 +464,7 @@ input[type=number]{-moz-appearance:textfield}
 }
 .hf{flex:1;text-align:center}
 .hf .v{font-size:.95rem;font-weight:700;color:var(--t1)}
-.hf .l{font-size:.72rem;color:var(--hero-sub);margin-top:3px;opacity:.85}
+.hf .l{font-size:.8rem;color:var(--hero-sub);margin-top:3px;opacity:.85}
 .hf-d{width:1px;background:var(--hero-line);flex-shrink:0}
 
 /* ── SAVINGS HERO CARD */
@@ -456,7 +474,7 @@ input[type=number]{-moz-appearance:textfield}
   padding:22px 20px 16px;box-shadow:var(--sh-g);
   position:relative;overflow:hidden;
 }
-.shc-lbl{font-size:.78rem;font-weight:600;
+.shc-lbl{font-size:.86rem;font-weight:600;
   letter-spacing:.03em;color:var(--shero-lbl);margin-bottom:8px}
 .shc-pct{font-size:2.9rem;font-weight:700;color:var(--g);letter-spacing:-.03em;line-height:1.05}
 .shc-pct .cu{font-size:1.05rem;font-weight:500;margin-left:3px;opacity:.6}
@@ -480,7 +498,7 @@ input[type=number]{-moz-appearance:textfield}
 }
 .shf{flex:1;text-align:center}
 .shf .v{font-size:.92rem;font-weight:700;color:var(--t1)}
-.shf .l{font-size:.72rem;color:var(--shero-sub);margin-top:3px;opacity:.85}
+.shf .l{font-size:.8rem;color:var(--shero-sub);margin-top:3px;opacity:.85}
 .shf-d{width:1px;background:var(--shero-line);flex-shrink:0}
 
 /* ── STAT CARD */
@@ -491,16 +509,16 @@ input[type=number]{-moz-appearance:textfield}
 }
 .sc.hi{background:linear-gradient(var(--vs),var(--vs)),var(--s2);border-color:var(--vb)}
 .sc.gi{background:linear-gradient(var(--gs),var(--gs)),var(--s2);border-color:var(--gb)}
-.sc-lbl{font-size:.75rem;font-weight:600;color:var(--t2);
+.sc-lbl{font-size:.83rem;font-weight:600;color:var(--t2);
   margin-bottom:6px;letter-spacing:.01em;
   display:flex;align-items:center;gap:5px}
 .sc-val{font-size:1.5rem;font-weight:700;color:var(--t1);
   letter-spacing:-.02em;line-height:1.1;overflow-wrap:anywhere}
-.sc-val .u{font-size:.74rem;font-weight:500;margin-left:3px;opacity:.6}
+.sc-val .u{font-size:.82rem;font-weight:500;margin-left:3px;opacity:.6}
 .sc-val.lg{font-size:1.55rem}
 .sc-val.pos{color:var(--g)} .sc-val.war{color:var(--a)} .sc-val.neg{color:var(--r)}
 .sc-val.acc{color:var(--vl)}
-.sc-sub{font-size:.72rem;color:var(--t3);margin-top:5px;line-height:1.45}
+.sc-sub{font-size:.8rem;color:var(--t3);margin-top:5px;line-height:1.45}
 
 /* ── INPUT PANEL */
 .ip{background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);overflow:hidden;box-shadow:var(--sh-card)}
@@ -511,10 +529,10 @@ input[type=number]{-moz-appearance:textfield}
 .fi:last-child{border-bottom:none}
 .fi:focus-within{background:linear-gradient(var(--vs),var(--vs)),var(--s2);box-shadow:inset 3px 0 0 var(--vc)}
 .fm{flex:1;min-width:0}
-.fl{font-size:.76rem;font-weight:600;color:var(--t2);
+.fl{font-size:.84rem;font-weight:600;color:var(--t2);
   margin-bottom:4px;display:flex;align-items:center;gap:6px;letter-spacing:.01em;flex-wrap:wrap}
 .fl .ic{font-size:.92rem}
-.opt{font-size:.68rem;padding:1px 7px;border-radius:20px;
+.opt{font-size:.76rem;padding:1px 7px;border-radius:20px;
   background:linear-gradient(var(--vs),var(--vs)),var(--s2);color:var(--vl);font-weight:600;letter-spacing:.02em}
 .fi-inp{
   background:transparent;border:none;outline:none;width:100%;
@@ -524,9 +542,9 @@ input[type=number]{-moz-appearance:textfield}
 .fi-inp:focus-visible{outline:none}
 .fi-inp::placeholder{color:var(--ph);font-weight:400;font-size:1.05rem}
 .fi-inp.sm{font-size:1.1rem}
-.fu{font-size:.8rem;font-weight:600;color:var(--t3);white-space:nowrap;flex-shrink:0}
+.fu{font-size:.88rem;font-weight:600;color:var(--t3);white-space:nowrap;flex-shrink:0}
 .fi-days-badge{
-  font-size:.75rem;font-weight:700;padding:4px 11px;border-radius:20px;
+  font-size:.83rem;font-weight:700;padding:4px 11px;border-radius:20px;
   background:linear-gradient(var(--vs),var(--vs)),var(--s2);color:var(--vl);border:1px solid var(--vb);white-space:nowrap;
 }
 
@@ -547,8 +565,8 @@ input[type=number]{-moz-appearance:textfield}
 .sb-ico{flex-shrink:0;line-height:1}
 .sb-b{flex:1;min-width:0}
 .sb-t{font-size:.92rem;font-weight:700;color:var(--t1);margin-bottom:2px}
-.sb-s{font-size:.78rem;color:var(--t2);line-height:1.45}
-.sb-badge{font-size:.7rem;font-weight:700;padding:4px 9px;border-radius:20px;
+.sb-s{font-size:.86rem;color:var(--t2);line-height:1.45}
+.sb-badge{font-size:.78rem;font-weight:700;padding:4px 9px;border-radius:20px;
   letter-spacing:.02em;white-space:nowrap;flex-shrink:0}
 .sb.safe .sb-badge {background:rgba(74,222,128,.18);color:var(--g)}
 .sb.tight .sb-badge{background:rgba(251,191,36,.18);color:var(--a)}
@@ -564,10 +582,10 @@ input[type=number]{-moz-appearance:textfield}
 }
 .mb:active{transform:scale(.95)}
 .mi{font-size:1.25rem;margin-bottom:4px}
-.mn{font-size:.72rem;font-weight:700;color:var(--t2);
+.mn{font-size:.8rem;font-weight:700;color:var(--t2);
   letter-spacing:.03em;margin-bottom:3px}
 .mv{font-size:1rem;font-weight:700;color:var(--t1)}
-.ms2{font-size:.7rem;color:var(--t3);margin-top:3px}
+.ms2{font-size:.78rem;color:var(--t3);margin-top:3px}
 .mb.ms.on{background:linear-gradient(var(--gs),var(--gs)),var(--s2);border-color:var(--gb)}
 .mb.ms.on .mv,.mb.ms.on .mn{color:var(--g)}
 .mb.mc.on{background:linear-gradient(var(--vs),var(--vs)),var(--s2);border-color:var(--vb)}
@@ -580,7 +598,7 @@ input[type=number]{-moz-appearance:textfield}
   padding:14px 16px;display:flex;gap:11px;align-items:flex-start;margin-top:10px}
 .wb-i{font-size:1.3rem;flex-shrink:0;margin-top:1px}
 .wb-h{font-size:.9rem;font-weight:700;color:var(--r);margin-bottom:3px}
-.wb-b{font-size:.8rem;color:var(--t2);line-height:1.6}
+.wb-b{font-size:.88rem;color:var(--t2);line-height:1.6}
 
 /* ── TREND CARD */
 .tc{display:flex;align-items:center;gap:12px;padding:14px 16px;margin-top:10px;
@@ -591,8 +609,8 @@ input[type=number]{-moz-appearance:textfield}
 .tc-i{flex-shrink:0}
 .tc-b{flex:1;min-width:0}
 .tc-h{font-size:.92rem;font-weight:700;color:var(--t1);margin-bottom:2px}
-.tc-s{font-size:.78rem;color:var(--t2);line-height:1.45}
-.tc-badge{font-size:.7rem;font-weight:700;padding:4px 9px;border-radius:20px;
+.tc-s{font-size:.86rem;color:var(--t2);line-height:1.45}
+.tc-badge{font-size:.78rem;font-weight:700;padding:4px 9px;border-radius:20px;
   letter-spacing:.02em;white-space:nowrap;background:var(--s4);color:var(--t2)}
 .tc.under  .tc-badge{background:rgba(74,222,128,.18);color:var(--g)}
 .tc.ontrack .tc-badge{background:linear-gradient(var(--vs),var(--vs)),var(--s2);color:var(--vl)}
@@ -609,12 +627,12 @@ input[type=number]{-moz-appearance:textfield}
   font-family:inherit;caret-color:var(--vc);-webkit-appearance:none;
 }
 .la-inp::placeholder{color:var(--ph);font-weight:500;font-size:1.6rem}
-.ln{display:flex;align-items:center;padding:10px 18px;
+.ln{display:flex;align-items:center;padding:8px 10px 8px 18px;
   border-bottom:1px solid var(--b1);gap:8px;transition:background .15s}
 .ln:focus-within{background:linear-gradient(var(--vs),var(--vs)),var(--s2)}
 .ln-inp{
   background:transparent;border:none;outline:none;flex:1;min-width:0;
-  font-size:.95rem;color:var(--t1);font-family:inherit;caret-color:var(--vc);
+  font-size:1.05rem;color:var(--t1);font-family:inherit;caret-color:var(--vc);min-height:44px;
 }
 .la-inp:focus-visible,.ln-inp:focus-visible{outline:none}
 .ln-inp::placeholder{color:var(--ph)}
@@ -631,7 +649,7 @@ input[type=number]{-moz-appearance:textfield}
 .tdc{background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);padding:15px 16px;box-shadow:var(--sh-card);margin-top:10px}
 .sh + .tdc{margin-top:0}
 .td-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;gap:8px}
-.td-tag{font-size:.74rem;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
+.td-tag{font-size:.82rem;font-weight:700;padding:3px 9px;border-radius:20px;white-space:nowrap}
 .td-tag.ok  {background:linear-gradient(var(--gs),var(--gs)),var(--s2);color:var(--g)}
 .td-tag.over{background:linear-gradient(var(--rs),var(--rs)),var(--s2);color:var(--r)}
 .td-tag.eq  {background:linear-gradient(var(--vs),var(--vs)),var(--s2);color:var(--vl)}
@@ -641,39 +659,39 @@ input[type=number]{-moz-appearance:textfield}
 .hd{background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);overflow:hidden;margin-bottom:10px}
 .hd-hdr{display:flex;justify-content:space-between;align-items:center;gap:8px;
   padding:10px 16px;background:var(--s3);border-bottom:1px solid var(--b1)}
-.hd-lbl{font-size:.8rem;font-weight:700;color:var(--t1)}
-.hd-tot{font-size:.75rem;font-weight:600;color:var(--t2)}
+.hd-lbl{font-size:.88rem;font-weight:700;color:var(--t1)}
+.hd-tot{font-size:.83rem;font-weight:600;color:var(--t2)}
 .he{display:flex;align-items:center;gap:11px;
   padding:9px 10px 9px 16px;border-bottom:1px solid var(--b1)}
 .he:last-child{border-bottom:none}
-.he-tm{font-size:.72rem;color:var(--t3);width:38px;flex-shrink:0}
-.he-nt{flex:1;min-width:0;font-size:.88rem;color:var(--t1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.he-tm{font-size:.8rem;color:var(--t3);width:38px;flex-shrink:0}
+.he-nt{flex:1;min-width:0;font-size:.96rem;color:var(--t1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .he-nt.em{color:var(--t3);font-style:italic}
 .he-am{font-size:.92rem;font-weight:700;color:var(--t1);white-space:nowrap}
 .he-dl{background:none;border:none;cursor:pointer;color:var(--t3);
-  font-size:.85rem;width:36px;height:36px;border-radius:10px;transition:all .15s;flex-shrink:0;
+  font-size:.93rem;width:36px;height:36px;border-radius:10px;transition:all .15s;flex-shrink:0;
   display:grid;place-items:center}
 .he-dl:active{background:linear-gradient(var(--rs),var(--rs)),var(--s2);color:var(--r)}
 
 /* ── INSIGHTS CHART */
 .chart-wrap{padding:15px 14px 11px;background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);position:relative;box-shadow:var(--sh-card)}
 .chart-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px;gap:8px}
-.chart-title{font-size:.8rem;font-weight:600;color:var(--t2)}
+.chart-title{font-size:.88rem;font-weight:600;color:var(--t2)}
 .chart-legend{display:flex;align-items:center;gap:10px}
-.cl-item{display:flex;align-items:center;gap:5px;font-size:.72rem;color:var(--t2)}
+.cl-item{display:flex;align-items:center;gap:5px;font-size:.8rem;color:var(--t2)}
 .cl-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .chart-bars{display:flex;align-items:flex-end;gap:6px;height:120px;position:relative}
 .chart-col{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:0}
-.chart-bar-val{font-size:.64rem;color:var(--t2);margin-bottom:3px;height:14px;line-height:14px;white-space:nowrap;
+.chart-bar-val{font-size:.72rem;color:var(--t2);margin-bottom:3px;height:14px;line-height:14px;white-space:nowrap;
   overflow:hidden;text-overflow:ellipsis;max-width:100%;text-align:center}
 .chart-bar{width:100%;max-width:36px;border-radius:6px 6px 2px 2px;min-height:2px;
   transition:height .5s cubic-bezier(.4,0,.2,1)}
-.chart-day{font-size:.72rem;font-weight:600;color:var(--t3);margin-top:6px;height:16px;line-height:16px}
+.chart-day{font-size:.8rem;font-weight:600;color:var(--t3);margin-top:6px;height:16px;line-height:16px}
 .chart-day.td{color:var(--vl)}
 .budget-line-wrap{position:absolute;left:0;right:0;pointer-events:none}
 .budget-line{height:1px;border-top:1.5px dashed var(--vb);position:relative}
 .budget-line span{position:absolute;right:0;top:-16px;
-  font-size:.66rem;color:var(--vl);font-weight:700;
+  font-size:.74rem;color:var(--vl);font-weight:700;
   background:var(--s2);padding:0 4px;border-radius:4px}
 
 /* ── QUICK ADD */
@@ -687,7 +705,7 @@ input[type=number]{-moz-appearance:textfield}
 .tip{background:var(--s3);border:1px solid var(--b1);border-radius:var(--rl);
   padding:13px 15px;display:flex;gap:11px;align-items:flex-start;margin-top:10px}
 .tip-i{font-size:1.05rem;flex-shrink:0;margin-top:1px}
-.tip-t{font-size:.84rem;color:var(--t2);line-height:1.65}
+.tip-t{font-size:.92rem;color:var(--t2);line-height:1.65}
 .tip-t strong{color:var(--t1);font-weight:700}
 .tip.good{background:linear-gradient(var(--gs),var(--gs)),var(--s2);border-color:var(--gb)}
 .tip.warn{background:linear-gradient(var(--as),var(--as)),var(--s2);border-color:var(--ab)}
@@ -699,7 +717,7 @@ input[type=number]{-moz-appearance:textfield}
 .setup-ico{font-size:2.2rem;margin:0 auto 12px;display:grid;place-items:center;
   width:64px;height:64px;border-radius:20px;background:linear-gradient(var(--vs),var(--vs)),var(--s2)}
 .setup-h{font-size:1.05rem;font-weight:700;color:var(--t1);margin-bottom:6px}
-.setup-s{font-size:.88rem;color:var(--t2);line-height:1.65;margin-bottom:18px}
+.setup-s{font-size:.96rem;color:var(--t2);line-height:1.65;margin-bottom:18px}
 .setup-btn{padding:13px 28px;background:var(--vc);border:none;border-radius:var(--rm);
   color:var(--on-acc);font-size:.95rem;font-weight:700;cursor:pointer;font-family:inherit;
   box-shadow:var(--sh-v);min-height:46px}
@@ -708,7 +726,7 @@ input[type=number]{-moz-appearance:textfield}
 /* ── GHOST BUTTON */
 .ghost{
   width:100%;padding:13px;min-height:46px;background:transparent;border:1px solid var(--b2);
-  border-radius:var(--rl);color:var(--t2);font-size:.86rem;font-weight:600;
+  border-radius:var(--rl);color:var(--t2);font-size:.94rem;font-weight:600;
   cursor:pointer;font-family:inherit;
   display:flex;align-items:center;justify-content:center;gap:6px;transition:all .2s;
 }
@@ -717,7 +735,7 @@ input[type=number]{-moz-appearance:textfield}
 /* ── EMPTY */
 .empty{text-align:center;padding:32px 20px;color:var(--t2)}
 .empty-i{font-size:2.2rem;margin-bottom:9px;display:block;opacity:.8}
-.empty p{font-size:.88rem;line-height:1.7;max-width:240px;margin:0 auto}
+.empty p{font-size:.96rem;line-height:1.7;max-width:240px;margin:0 auto}
 
 /* ── RECENT ENTRIES (overview) */
 .re-item{display:flex;align-items:center;padding:12px 16px;
@@ -730,11 +748,11 @@ input[type=number]{-moz-appearance:textfield}
 .re-note.em{color:var(--t3);font-style:italic}
 .re-r{text-align:right;flex-shrink:0}
 .re-amt{font-size:.92rem;font-weight:700;color:var(--t1)}
-.re-date{font-size:.72rem;color:var(--t3);margin-top:2px}
+.re-date{font-size:.8rem;color:var(--t3);margin-top:2px}
 .more-btn{
   display:block;width:100%;padding:12px;min-height:44px;text-align:center;
   background:none;border:none;border-top:1px solid var(--b1);cursor:pointer;
-  font-size:.82rem;font-weight:700;color:var(--vl);font-family:inherit;
+  font-size:.9rem;font-weight:700;color:var(--vl);font-family:inherit;
 }
 
 /* ── GRID HELPERS */
@@ -744,10 +762,10 @@ input[type=number]{-moz-appearance:textfield}
 /* ── MISC */
 .divr{display:flex;align-items:center;gap:9px;margin:2px 0}
 .divr-l{flex:1;height:1px;background:var(--b1)}
-.divr-t{font-size:.7rem;font-weight:700;color:var(--t3);letter-spacing:.05em}
+.divr-t{font-size:.78rem;font-weight:700;color:var(--t3);letter-spacing:.05em}
 .pill{
   display:inline-flex;align-items:center;gap:4px;
-  font-size:.74rem;font-weight:700;padding:3px 10px;
+  font-size:.82rem;font-weight:700;padding:3px 10px;
   border-radius:20px;white-space:nowrap;
 }
 .pill.ok  {background:linear-gradient(var(--gs),var(--gs)),var(--s2);color:var(--g)}
@@ -783,12 +801,12 @@ input[type=number]{-moz-appearance:textfield}
 .lp{display:flex;align-items:center;gap:10px;padding:10px 18px;border-bottom:1px solid var(--b1)}
 .lp-btn{display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:0 14px;
   border:1px dashed var(--b3);border-radius:12px;color:var(--t2);
-  font-size:.86rem;font-weight:600;cursor:pointer}
+  font-size:.94rem;font-weight:600;cursor:pointer}
 .lp-btn .i{font-size:1.1rem;color:var(--vl)}
 #lp-prev{position:relative;display:flex}
 #lp-prev img{width:44px;height:44px;object-fit:cover;border-radius:10px;border:1px solid var(--b2)}
 #lp-prev button{position:absolute;top:-8px;right:-8px;width:24px;height:24px;border-radius:50%;
-  display:grid;place-items:center;font-size:.8rem;border:none;cursor:pointer;
+  display:grid;place-items:center;font-size:.88rem;border:none;cursor:pointer;
   background:var(--s4);color:var(--t1)}
 .he-ph{background:linear-gradient(var(--vs),var(--vs)),var(--s2);border:none;cursor:pointer;color:var(--vl);
   width:32px;height:32px;border-radius:9px;display:grid;place-items:center;font-size:.95rem;flex-shrink:0}
@@ -808,7 +826,7 @@ input[type=number]{-moz-appearance:textfield}
 #vw-img[hidden],#vw-empty[hidden],.vw-bar a[hidden]{display:none}
 
 /* ── SETTINGS (Google Sheets) */
-.set-p{font-size:.86rem;color:var(--t2);line-height:1.65}
+.set-p{font-size:.94rem;color:var(--t2);line-height:1.65}
 .set-p strong{color:var(--t1)}
 .set-inp{width:100%;margin-top:12px;padding:12px 14px;min-height:46px;border-radius:12px;
   background:var(--bg);border:1px solid var(--b2);color:var(--t1);font:inherit;font-size:16px;outline:none}
@@ -817,11 +835,11 @@ input[type=number]{-moz-appearance:textfield}
   background:var(--vc);color:var(--on-acc);font:inherit;font-weight:700;font-size:.95rem;cursor:pointer;
   display:flex;align-items:center;justify-content:center;gap:8px}
 .set-btn:disabled{opacity:.6;cursor:wait}
-.set-msg{margin-top:10px;font-size:.82rem;line-height:1.5}
+.set-msg{margin-top:10px;font-size:.9rem;line-height:1.5}
 .set-msg.err{color:var(--r)} .set-msg.ok{color:var(--g)}
 .set-link{color:var(--vl);font-weight:600}
 .sync-lines{display:flex;flex-direction:column;gap:8px}
-.sync-line{display:flex;align-items:flex-start;gap:9px;font-size:.88rem;color:var(--t1);line-height:1.5}
+.sync-line{display:flex;align-items:flex-start;gap:9px;font-size:.96rem;color:var(--t1);line-height:1.5}
 .sync-line .i{font-size:1.05rem;margin-top:.15em;color:var(--g)}
 .sync-line.wait .i{color:var(--a)} .sync-line.err .i{color:var(--r)}
 
@@ -833,11 +851,11 @@ input[type=number]{-moz-appearance:textfield}
 .plan-dot{width:10px;height:10px;border-radius:3px;flex-shrink:0}
 .plan-tx{flex:1;min-width:0}
 .plan-nm{font-size:.92rem;font-weight:700;color:var(--t1)}
-.plan-ds{font-size:.74rem;color:var(--t3);margin-top:2px}
+.plan-ds{font-size:.82rem;color:var(--t3);margin-top:2px}
 .plan-am{text-align:right;flex-shrink:0}
 .plan-v{font-size:1.05rem;font-weight:700;color:var(--t1)}
-.plan-pc{font-size:.72rem;color:var(--t3);margin-top:1px}
-.plan-foot{margin-top:12px;padding-top:12px;border-top:1px solid var(--b1);font-size:.84rem;color:var(--t2);line-height:1.55}
+.plan-pc{font-size:.8rem;color:var(--t3);margin-top:1px}
+.plan-foot{margin-top:12px;padding-top:12px;border-top:1px solid var(--b1);font-size:.92rem;color:var(--t2);line-height:1.55}
 .plan-foot strong{color:var(--t1)}
 .plan-btn{width:100%;margin-top:10px;min-height:48px;border-radius:14px;cursor:pointer;
   background:linear-gradient(var(--vs),var(--vs)),var(--s2);border:1px solid var(--vb);color:var(--vl);font:inherit;font-weight:700;font-size:.92rem;
@@ -848,7 +866,7 @@ input[type=number]{-moz-appearance:textfield}
 .cat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:10px 14px;border-bottom:1px solid var(--b1)}
 .chip{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-height:54px;padding:6px 2px;
   border-radius:12px;border:1px solid var(--b1);background:transparent;color:var(--t2);
-  font:inherit;font-size:.72rem;font-weight:600;cursor:pointer;transition:all .15s}
+  font:inherit;font-size:.8rem;font-weight:600;cursor:pointer;transition:all .15s}
 .chip .i{font-size:1.15rem;color:var(--c)}
 .chip.on{border-color:var(--c);background:var(--cs);color:var(--t1)}
 .he{cursor:pointer}
@@ -863,19 +881,19 @@ input[type=number]{-moz-appearance:textfield}
   display:flex;flex-direction:column;gap:10px;box-shadow:var(--sh-card)}
 .seg{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;background:var(--glass);padding:4px;border-radius:12px}
 .seg button{min-height:38px;border:none;border-radius:9px;background:transparent;color:var(--t2);
-  font:inherit;font-weight:600;font-size:.86rem;cursor:pointer}
+  font:inherit;font-weight:600;font-size:.94rem;cursor:pointer}
 .seg button.on{background:var(--vc);color:var(--on-acc)}
 .hf-pick{width:100%;min-height:46px;padding:8px 12px;border-radius:12px;border:1px solid var(--b2);
   background:var(--bg);color:var(--t1);font:inherit;font-size:16px;outline:none}
 .hf-pick:focus{border-color:var(--vc)}
 .hf-cats{display:flex;flex-wrap:wrap;gap:6px}
 .hf-cat{display:inline-flex;align-items:center;gap:5px;min-height:36px;padding:0 12px;border-radius:99px;
-  border:1px solid var(--b2);background:transparent;color:var(--t2);font:inherit;font-size:.82rem;font-weight:600;cursor:pointer}
+  border:1px solid var(--b2);background:transparent;color:var(--t2);font:inherit;font-size:.9rem;font-weight:600;cursor:pointer}
 .hf-cat .i{color:var(--c,var(--vl))}
 .hf-cat.on{background:var(--cs,var(--vs));border-color:var(--c,var(--vc));color:var(--t1)}
-.hf-sum{font-size:.84rem;color:var(--t2)}
+.hf-sum{font-size:.92rem;color:var(--t2)}
 .hf-sum strong{color:var(--t1)}
-.hint{font-size:.76rem;color:var(--t3);margin:-4px 0 8px}
+.hint{font-size:.84rem;color:var(--t3);margin:-4px 0 8px}
 
 /* ── EDIT SHEET */
 #editor{position:fixed;inset:0;z-index:110;background:rgba(3,8,9,.55);display:flex;align-items:flex-end;justify-content:center}
@@ -887,18 +905,18 @@ input[type=number]{-moz-appearance:textfield}
 .ed-h{display:flex;justify-content:space-between;align-items:center;font-size:1.08rem;font-weight:700}
 .ed-x{width:40px;height:40px;border-radius:12px;border:none;background:var(--glass);color:var(--t2);
   display:grid;place-items:center;font-size:1.05rem;cursor:pointer}
-.ed-l{display:block;font-size:.8rem;font-weight:600;color:var(--t2);margin-bottom:6px}
+.ed-l{display:block;font-size:.88rem;font-weight:600;color:var(--t2);margin-bottom:6px}
 .ed-box .cat-row{padding:0;border:none}
 .ed-ph{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .ed-ph img{width:60px;height:60px;object-fit:cover;border-radius:12px;border:1px solid var(--b2)}
 .btn2{min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--b2);background:transparent;color:var(--t1);
-  font:inherit;font-weight:600;font-size:.86rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+  font:inherit;font-weight:600;font-size:.94rem;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .ed-btns{display:flex;gap:10px}
 .ed-btns>*{flex:1;margin-top:0}
 
 /* ── THEME STORE */
 .th-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.th-glbl{font-size:.8rem;font-weight:700;color:var(--t2);margin:14px 2px 8px;text-shadow:0 0 3px var(--bg),0 0 6px var(--bg)}
+.th-glbl{font-size:.88rem;font-weight:700;color:var(--t2);margin:14px 2px 8px;text-shadow:0 0 3px var(--bg),0 0 6px var(--bg)}
 .th-glbl:first-of-type{margin-top:0}
 .th-card{position:relative;display:flex;flex-direction:column;gap:6px;padding:8px;border-radius:16px;
   border:2px solid var(--b1);background:var(--s2);color:var(--t1);font:inherit;text-align:left;cursor:pointer;box-shadow:var(--sh-card)}
@@ -908,10 +926,24 @@ input[type=number]{-moz-appearance:textfield}
 .th-prev::before{content:'';position:absolute;left:8px;bottom:8px;width:46px;height:14px;border-radius:7px;background:var(--vc)}
 .th-prev::after{content:'';position:absolute;right:6px;top:6px;width:44px;height:44px;background:var(--mascot,none) center/contain no-repeat}
 .th-nm{font-size:.9rem;font-weight:700;padding:0 2px}
-.th-st{font-size:.74rem;color:var(--t3);padding:0 2px 2px}
+.th-st{font-size:.82rem;color:var(--t3);padding:0 2px 2px}
 .th-card.on .th-st{color:var(--vl);font-weight:700}
 .th-add{min-height:40px;border-radius:11px;border:none;background:var(--vc);color:var(--on-acc);
-  font:inherit;font-weight:700;font-size:.84rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+  font:inherit;font-weight:700;font-size:.92rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px}
+
+.lc .cat-row{border-bottom:1px solid var(--b1)}
+.lp-cam{flex-shrink:0;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;cursor:pointer;
+  border:1px dashed var(--b3);color:var(--vl);font-size:1.25rem}
+#lp-prev img{width:40px;height:40px}
+.hf-det{margin-bottom:10px}
+.hf-det>summary{list-style:none;display:flex;align-items:center;gap:8px;min-height:48px;padding:0 14px;cursor:pointer;
+  background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);color:var(--t2);font-size:.92rem;box-shadow:var(--sh-card)}
+.hf-det>summary::-webkit-details-marker{display:none}
+.hf-det>summary .i{color:var(--vl);font-size:1.1rem}
+.hf-det>summary strong{color:var(--t1)}
+.hf-n{margin-left:auto;font-size:.84rem;color:var(--t3);white-space:nowrap}
+.hf-det[open]>summary{border-radius:var(--rl) var(--rl) 0 0;border-bottom:none}
+.hf-det[open] .hf-bar{border-radius:0 0 var(--rl) var(--rl);margin-bottom:0}
 
 /* ── LINE ICONS */
 .i{width:1em;height:1em;flex-shrink:0;display:inline-block;vertical-align:-0.15em}
@@ -932,7 +964,7 @@ input[type=number]{-moz-appearance:textfield}
 .mb.ms.on .mi{color:var(--g)} .mb.mc.on .mi{color:var(--vl)} .mb.mf.on .mi{color:var(--a)}
 .setup-ico{color:var(--vl);font-size:1.8rem}
 .empty-i{color:var(--vl)}
-.pill .i{font-size:.85rem}
+.pill .i{font-size:.93rem}
 .log-btn .i{font-size:1.15rem}
 .ghost .i{font-size:1rem}
 .he-dl .i{font-size:1rem}
@@ -1306,21 +1338,21 @@ function rHome(){
   if(c.daily>0){
     h+=`<div class="tdc">
       <div class="td-hdr">
-        <span style="font-size:.8rem;font-weight:700;color:var(--t2)">งบวันนี้ ${fmt(c.daily,0)} ฿</span>
+        <span style="font-size:.88rem;font-weight:700;color:var(--t2)">งบวันนี้ ${fmt(c.daily,0)} ฿</span>
         ${tdOver>0.5
           ?`<span class="td-tag over">เกิน ${fW(tdOver)} ฿</span>`
           :tdOver<-0.5
             ?`<span class="td-tag ok">ประหยัด ${fW(-tdOver)} ฿</span>`
             :t.tdSpent>0
               ?`<span class="td-tag eq">ตามแผน</span>`
-              :`<span style="font-size:.76rem;color:var(--t3)">ยังไม่มีรายการ</span>`}
+              :`<span style="font-size:.84rem;color:var(--t3)">ยังไม่มีรายการ</span>`}
       </div>
       <div class="pt" style="height:8px">
         <div class="pf" style="width:${tdPct}%;height:8px;background:${tdCol}"></div>
       </div>
       <div class="td-row">
-        <span style="font-size:1.3rem;font-weight:700;color:var(--t1)">${fmt(t.tdSpent,0)}<span style="font-size:.78rem;opacity:.5;margin-left:3px">฿</span></span>
-        <span style="font-size:.78rem;color:var(--t3)">${tdPct.toFixed(0)}% ของงบวันนี้</span>
+        <span style="font-size:1.3rem;font-weight:700;color:var(--t1)">${fmt(t.tdSpent,0)}<span style="font-size:.86rem;opacity:.5;margin-left:3px">฿</span></span>
+        <span style="font-size:.86rem;color:var(--t3)">${tdPct.toFixed(0)}% ของงบวันนี้</span>
       </div>
     </div>`;
   }
@@ -1345,16 +1377,16 @@ function rHome(){
     h+=`<div class="sh">เงินเก็บ</div>
     <div style="background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);padding:14px 16px">
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px">
-        <span style="font-size:.8rem;font-weight:700;color:var(--t2)">${ic('target')} เป้าปีนี้ ${fmt(sg,0)} ฿</span>
-        <span style="font-size:.8rem;font-weight:700;color:var(--g)">${sPct.toFixed(0)}%</span>
+        <span style="font-size:.88rem;font-weight:700;color:var(--t2)">${ic('target')} เป้าปีนี้ ${fmt(sg,0)} ฿</span>
+        <span style="font-size:.88rem;font-weight:700;color:var(--g)">${sPct.toFixed(0)}%</span>
       </div>
       <div class="pt" style="height:9px;margin-bottom:7px">
         <div class="pf" style="width:${sPct}%;height:9px;background:linear-gradient(90deg,var(--g),var(--gl))"></div>
       </div>
       <div style="display:flex;justify-content:space-between">
-        <span style="font-size:.76rem;color:var(--t2)">ออมแล้ว ${fmt(sa,0)} ฿</span>
-        ${sa<sg?`<span style="font-size:.76rem;color:var(--t3)">ขาดอีก ${fmt(sg-sa,0)} ฿</span>`:
-          `<span style="font-size:.76rem;color:var(--g)">${ic('trophy')} ถึงเป้าแล้ว!</span>`}
+        <span style="font-size:.84rem;color:var(--t2)">ออมแล้ว ${fmt(sa,0)} ฿</span>
+        ${sa<sg?`<span style="font-size:.84rem;color:var(--t3)">ขาดอีก ${fmt(sg-sa,0)} ฿</span>`:
+          `<span style="font-size:.84rem;color:var(--g)">${ic('trophy')} ถึงเป้าแล้ว!</span>`}
       </div>
     </div>`;
   }
@@ -1379,7 +1411,7 @@ function rHome(){
   } else {
     h+=`<div class="empty" style="padding:18px">
       <span class="empty-i" style="font-size:1.6rem">${ic('receipt')}</span>
-      <p style="font-size:.78rem">ยังไม่มีรายการ — <a href="javascript:go('track')" style="color:var(--vl)">บันทึกเลย</a></p>
+      <p style="font-size:.86rem">ยังไม่มีรายการ — <a href="javascript:go('track')" style="color:var(--vl)">บันทึกเลย</a></p>
     </div>`;
   }
   h+=`</div>`;
@@ -1529,20 +1561,20 @@ function uCalcOut(){
       h+=`<div class="sh">จำลองการใช้เงิน</div>
       <div class="sc" style="padding:16px 16px">
         <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px">
-          <span style="font-size:.8rem;font-weight:700;color:var(--t2)">ถ้าใช้ ${fW(c.tgt)} ฿/วัน</span>
+          <span style="font-size:.88rem;font-weight:700;color:var(--t2)">ถ้าใช้ ${fW(c.tgt)} ฿/วัน</span>
           <span class="pill ${ok}">${oTxt}</span>
         </div>
         <div class="pt" style="height:9px"><div class="pf" style="width:${tlPct}%;height:9px;background:${tlCol}"></div></div>
         <div style="display:flex;justify-content:space-between;margin:5px 0 10px">
-          <span style="font-size:.72rem;color:var(--t3)">วันนี้</span>
-          <span style="font-size:.74rem;color:${tlCol};font-weight:700">พอ ${c.dLast.toFixed(1)} วัน / ${dDays} วัน</span>
-          <span style="font-size:.72rem;color:var(--t3)">เงินเดือน</span>
+          <span style="font-size:.8rem;color:var(--t3)">วันนี้</span>
+          <span style="font-size:.82rem;color:${tlCol};font-weight:700">พอ ${c.dLast.toFixed(1)} วัน / ${dDays} วัน</span>
+          <span style="font-size:.8rem;color:var(--t3)">เงินเดือน</span>
         </div>
         <div class="g2">
-          <div><div style="font-size:.74rem;color:var(--t2);margin-bottom:3px">รวมใช้จ่าย</div>
-            <div style="font-size:1.2rem;font-weight:700;color:var(--t1)">${fmt(c.totSp,0)}<span style="font-size:.74rem;opacity:.5;margin-left:2px">฿</span></div></div>
-          <div><div style="font-size:.74rem;color:var(--t2);margin-bottom:3px">% ที่ใช้ไป</div>
-            <div style="font-size:1.2rem;font-weight:700;color:${bkCol}">${c.spend>0?bkPct.toFixed(1):'—'}<span style="font-size:.74rem;opacity:.5;margin-left:1px">%</span></div></div>
+          <div><div style="font-size:.82rem;color:var(--t2);margin-bottom:3px">รวมใช้จ่าย</div>
+            <div style="font-size:1.2rem;font-weight:700;color:var(--t1)">${fmt(c.totSp,0)}<span style="font-size:.82rem;opacity:.5;margin-left:2px">฿</span></div></div>
+          <div><div style="font-size:.82rem;color:var(--t2);margin-bottom:3px">% ที่ใช้ไป</div>
+            <div style="font-size:1.2rem;font-weight:700;color:${bkCol}">${c.spend>0?bkPct.toFixed(1):'—'}<span style="font-size:.82rem;opacity:.5;margin-left:1px">%</span></div></div>
         </div>
       </div>`;
     }
@@ -1587,8 +1619,27 @@ function rTrack(){
 
   let h=`<div class="w">`;
 
+  // Log form (อยู่บนสุด หาง่าย)
+  h+=`<div class="sh sh-first">จดรายจ่าย</div>
+  <div class="lc">
+    <div class="la">
+      <input class="la-inp" type="number" id="la" placeholder="0" inputmode="decimal" min="0" aria-label="จำนวนเงิน"
+        onkeydown="if(event.key==='Enter')logS()"/>
+      <div class="fu">บาท</div>
+    </div>
+    <div id="log-cats">${catChips(LCAT,'pickCat')}</div>
+    <div class="ln">
+      <input class="ln-inp" type="text" id="ln" placeholder="บันทึกย่อ (ไม่ใส่ก็ได้)" aria-label="บันทึกย่อ"
+        onkeydown="if(event.key==='Enter')logS()"/>
+      <div id="lp-prev"></div>
+      <label class="lp-cam" aria-label="แนบรูปใบเสร็จ">${ic('camera')}
+        <input type="file" accept="image/*" id="lp-inp" onchange="pickPhoto(this)" hidden/></label>
+    </div>
+    <button class="log-btn" onclick="logS()">${ic('plus')} บันทึก</button>
+  </div>`;
+
   // Status
-  h+=`<div class="sh sh-first">สถานะงบประมาณ</div>
+  h+=`<div class="sh">สถานะงบประมาณ</div>
   <div class="g3">
     <div class="sc">
       <div class="sc-lbl">เงินเหลือ</div>
@@ -1617,45 +1668,23 @@ function rTrack(){
     <span class="tc-badge">${Tr.badge}</span>
   </div>`;
 
-  // Log form
-  h+=`<div class="sh">บันทึกค่าใช้จ่าย</div>
-  <div class="lc">
-    <div class="la">
-      <input class="la-inp" type="number" id="la" placeholder="0" inputmode="decimal" min="0"
-        onkeydown="if(event.key==='Enter')logS()"/>
-      <div class="fu">฿</div>
-    </div>
-    <div class="ln">
-      <span style="flex-shrink:0;color:var(--t3);display:flex;font-size:1rem">${ic('pencil')}</span>
-      <input class="ln-inp" type="text" id="ln" placeholder="บันทึกย่อ เช่น ข้าวกลางวัน กาแฟ..."
-        onkeydown="if(event.key==='Enter')logS()"/>
-    </div>
-    <div id="log-cats">${catChips(LCAT,'pickCat')}</div>
-    <div class="lp">
-      <label class="lp-btn">${ic('camera')}<span id="lp-txt">แนบรูปใบเสร็จ</span>
-        <input type="file" accept="image/*" id="lp-inp" onchange="pickPhoto(this)" hidden/></label>
-      <div id="lp-prev"></div>
-    </div>
-    <button class="log-btn" onclick="logS()">${ic('plus')} บันทึก</button>
-  </div>`;
-
   // Today card
   if(t.daily>0){
     const pct=clamp(t.tdPct,0,100);
     h+=`<div class="tdc">
       <div class="td-hdr">
-        <span style="font-size:.8rem;font-weight:700;color:var(--t2)">${ic('calendar')} วันนี้</span>
-        <span style="font-size:.76rem;color:var(--t3)">${labelDate(todayISO())}</span>
+        <span style="font-size:.88rem;font-weight:700;color:var(--t2)">${ic('calendar')} วันนี้</span>
+        <span style="font-size:.84rem;color:var(--t3)">${labelDate(todayISO())}</span>
       </div>
       <div class="pt" style="height:8px"><div class="pf" style="width:${pct}%;height:8px;background:${tdC}"></div></div>
       <div class="td-row">
-        <span style="font-size:1.3rem;font-weight:700;color:var(--t1)">${fmt(t.tdSpent,0)}<span style="font-size:.76rem;opacity:.5;margin-left:3px">฿</span></span>
+        <span style="font-size:1.3rem;font-weight:700;color:var(--t1)">${fmt(t.tdSpent,0)}<span style="font-size:.84rem;opacity:.5;margin-left:3px">฿</span></span>
         ${tdOv>0.5?`<span class="td-tag over">เกิน ${fW(tdOv)} ฿</span>`
           :tdOv<-0.5?`<span class="td-tag ok">ประหยัด ${fW(-tdOv)} ฿</span>`
           :t.tdSpent>0?`<span class="td-tag eq">ตามแผน</span>`
-          :`<span style="font-size:.76rem;color:var(--t3)">ยังไม่มีรายการ</span>`}
+          :`<span style="font-size:.84rem;color:var(--t3)">ยังไม่มีรายการ</span>`}
       </div>
-      <div style="font-size:.76rem;color:var(--t3);margin-top:5px">งบวันนี้ <strong style="color:var(--t1)">${fmt(t.daily,0)} ฿</strong></div>
+      <div style="font-size:.84rem;color:var(--t3);margin-top:5px">งบวันนี้ <strong style="color:var(--t1)">${fmt(t.daily,0)} ฿</strong></div>
     </div>`;
   }
 
@@ -1680,7 +1709,7 @@ function rTrack(){
         h+=`<div class="he" role="button" tabindex="0" aria-label="แก้ไขรายการ ${esc(e.note||c.name)}"
             onclick="if(!event.target.closest('button'))openEdit(${e.id})" onkeydown="if(event.key==='Enter')openEdit(${e.id})">
           <span class="he-cat" style="${catStyle(c)}" title="${c.name}">${ic(c.icon)}</span>
-          <span class="he-nt ${!e.note?'em':''}">${e.note?esc(e.note):c.name}<span style="display:block;font-size:.72rem;color:var(--t3);font-style:normal">${e.ts||''} · ${c.name}</span></span>
+          <span class="he-nt ${!e.note?'em':''}">${e.note?esc(e.note):c.name}<span style="display:block;font-size:.8rem;color:var(--t3);font-style:normal">${e.ts||''} · ${c.name}</span></span>
           ${e.photo?`<button class="he-ph" aria-label="ดูรูปใบเสร็จ" onclick="openPhoto(${e.id})">${ic('image')}</button>`:''}
           <span class="he-am">${fmt(e.amount)} ฿</span>
           <button class="he-dl" aria-label="ลบรายการ" onclick="delE(${e.id})">${ic('x')}</button>
@@ -1813,9 +1842,9 @@ function rInsights(){
   <div class="sc" style="padding:14px 16px">
     <div style="display:flex;justify-content:space-between;align-items:center">
       <div>
-        <div style="font-size:.76rem;font-weight:700;color:var(--t2);margin-bottom:4px">${ic('arrow-up-right')} รายจ่ายสูงสุด</div>
-        <div style="font-size:.85rem;color:var(--t1);font-weight:600">${big.note?esc(big.note):catOf(big).name}</div>
-        <div style="font-size:.72rem;color:var(--t3);margin-top:2px">${labelDate(big.date)}</div>
+        <div style="font-size:.84rem;font-weight:700;color:var(--t2);margin-bottom:4px">${ic('arrow-up-right')} รายจ่ายสูงสุด</div>
+        <div style="font-size:.93rem;color:var(--t1);font-weight:600">${big.note?esc(big.note):catOf(big).name}</div>
+        <div style="font-size:.8rem;color:var(--t3);margin-top:2px">${labelDate(big.date)}</div>
       </div>
       <div style="font-size:1.5rem;font-weight:700;color:var(--r)">${fmt(big.amount,0)} ฿</div>
     </div>
@@ -1943,7 +1972,7 @@ function uPlan(){
       <span style="font-size:.95rem;font-weight:700;color:var(--t1)">${fW(P.efTarget)} ฿</span>
     </div>
     <div class="pt" style="height:9px"><div class="pf" style="width:${efPct}%;height:9px;background:${P.efFull?'var(--g)':'var(--a)'}"></div></div>
-    <div style="font-size:.8rem;color:var(--t2);margin-top:8px;line-height:1.55">${P.efFull
+    <div style="font-size:.88rem;color:var(--t2);margin-top:8px;line-height:1.55">${P.efFull
       ?`มีครบแล้ว ${fW(P.ef)} ฿ ส่วนออม 20% ไปออม/ลงทุนได้ทั้งหมด`
       :`มีแล้ว ${fW(P.ef)} ฿ · ถ้าเก็บเดือนละ ${fW(P.emergency)} ฿ จะครบในอีกประมาณ <strong style="color:var(--t1)">${P.months} เดือน</strong>`}</div>
   </div>
@@ -1980,14 +2009,14 @@ function uSavOut(){
     hero=`<div class="shc">
       <div class="shc-lbl">ความคืบหน้า</div>
       <div class="shc-pct">${over?ic('trophy')+' ':''}${over?'ถึงเป้าแล้ว!':pct.toFixed(0)}<span class="cu">${over?'':' %'}</span></div>
-      ${over?`<div style="font-size:.8rem;color:var(--gl);margin:4px 0">เกินเป้า ${fmt(sa-sg)} ฿ ยอดเยี่ยมมาก!</div>`:''}
+      ${over?`<div style="font-size:.88rem;color:var(--gl);margin:4px 0">เกินเป้า ${fmt(sa-sg)} ฿ ยอดเยี่ยมมาก!</div>`:''}
       <div class="shc-track">
         <div class="shc-fill" style="width:${dp}%"></div>
         ${[25,50,75].map(m=>`<div class="shc-milestone" style="left:${m}%"></div>`).join('')}
       </div>
       <div style="display:flex;justify-content:space-between;margin-bottom:2px">
-        <span style="font-size:.74rem;color:var(--shero-sub)">฿${fW(sa)}</span>
-        <span style="font-size:.74rem;color:var(--shero-sub)">เป้า ฿${fW(sg)}</span>
+        <span style="font-size:.82rem;color:var(--shero-sub)">฿${fW(sa)}</span>
+        <span style="font-size:.82rem;color:var(--shero-sub)">เป้า ฿${fW(sg)}</span>
       </div>
       <div class="shc-foot">
         <div class="shf"><div class="v">${fmt(sa)}</div><div class="l">ออมแล้ว</div></div>
@@ -2000,7 +2029,7 @@ function uSavOut(){
   } else {
     hero=`<div class="sc" style="padding:24px;text-align:center">
       <span style="font-size:2rem;display:block;margin-bottom:8px;opacity:.3">${ic('target')}</span>
-      <div style="font-size:.82rem;color:var(--t2)">ตั้งเป้าหมายเงินเก็บด้านล่าง</div>
+      <div style="font-size:.9rem;color:var(--t2)">ตั้งเป้าหมายเงินเก็บด้านล่าง</div>
     </div>`;
   }
   heroEl.innerHTML=hero;
@@ -2016,8 +2045,8 @@ function uSavOut(){
         const reached=pct>=m;
         return `<div class="sc ${reached?'gi':''}" style="text-align:center;padding:13px 10px">
           <div style="font-size:1.4rem;margin-bottom:4px;color:${reached?'var(--g)':'var(--t3)'}">${ic(reached?'star-fill':'circle')}</div>
-          <div style="font-size:.88rem;font-weight:700;color:${reached?'var(--g)':'var(--t3)'}">${m}%</div>
-          <div style="font-size:.72rem;color:var(--t3);margin-top:2px">${reached?'สำเร็จแล้ว':'ยังไม่ถึง'}</div>
+          <div style="font-size:.96rem;font-weight:700;color:${reached?'var(--g)':'var(--t3)'}">${m}%</div>
+          <div style="font-size:.8rem;color:var(--t3);margin-top:2px">${reached?'สำเร็จแล้ว':'ยังไม่ถึง'}</div>
         </div>`;
       }).join('')}
     </div>`;
@@ -2124,11 +2153,17 @@ function histFilter(){
   const cats=`<button class="hf-cat ${HF.cat==='all'?'on':''}" onclick="setHF('cat','all')">ทุกหมวด</button>`
     +CATS.map(c=>`<button class="hf-cat ${HF.cat===c.id?'on':''}" style="${catStyle(c)}" onclick="setHF('cat','${c.id}')">${ic(c.icon)}${c.name}</button>`).join('');
   const list=S.entries.filter(histMatch);
-  return `<div class="hf-bar">
+  const active=HF.mode!=='all'||HF.cat!=='all';
+  const lbl=({all:'ทั้งหมด',day:'วัน '+labelDate(HF.day),month:'เดือน '+HF.month,year:'ปี '+(+HF.year+543)})[HF.mode]
+    +' · '+(HF.cat==='all'?'ทุกหมวด':CATS.find(c=>c.id===HF.cat).name);
+  return `<details class="hf-det" ${HF.open||active?'open':''} ontoggle="HF.open=this.open">
+    <summary>${ic('sliders')}<span>ตัวกรอง: <strong>${lbl}</strong></span><span class="hf-n">${list.length} รายการ</span></summary>
+    <div class="hf-bar">
     <div class="seg" role="group" aria-label="ช่วงเวลา">${seg}</div>${pick}
     <div class="hf-cats" role="group" aria-label="หมวดหมู่">${cats}</div>
     <div class="hf-sum">พบ <strong>${list.length}</strong> รายการ · รวม <strong>${fmt(list.reduce((a,e)=>a+e.amount,0))} ฿</strong></div>
-  </div>`;
+    ${active?`<button class="btn2" onclick="HF.mode='all';HF.cat='all';rTrack()">ล้างตัวกรอง</button>`:''}
+  </div></details>`;
 }
 
 /* แก้ไขรายการ: เงิน บันทึก หมวด วันที่ รูป — แล้วส่งเข้าชีตใหม่ */
@@ -2345,14 +2380,13 @@ async function pickPhoto(inp){
   showPick();
 }
 function showPick(){
-  const el=$('lp-prev'), t=$('lp-txt');
+  const el=$('lp-prev');
   if(!el) return;
   if(el._url){ URL.revokeObjectURL(el._url); el._url=null; }
   if(pendingPhoto){
     el._url=URL.createObjectURL(pendingPhoto);
     el.innerHTML=`<img src="${el._url}" alt="รูปที่แนบ"/><button aria-label="เอารูปออก" onclick="pendingPhoto=null;showPick()">${ic('x')}</button>`;
-    t.textContent='เปลี่ยนรูป';
-  } else { el.innerHTML=''; t.textContent='แนบรูปใบเสร็จ'; }
+  } else { el.innerHTML=''; }
 }
 
 const driveUrl=id=>SY.photoFiles[id]?`https://drive.google.com/file/d/${SY.photoFiles[id]}/view`:'';
@@ -2542,6 +2576,8 @@ const THEMES=[
   {id:'raceyellow', grp:'race',   name:'เทอร์โบสายฟ้า',   desc:'คาร์บอน · เหลือง · เกจความเร็ว'},
   {id:'popart',     grp:'bright', name:'ป๊อปอาร์ต',        desc:'เหลืองสด · จุดฮาล์ฟโทน · เส้นหนา'},
   {id:'soda',       grp:'bright', name:'โซดามะนาว',       desc:'ฟ้าใส · ฟองโซดา · มะนาว'},
+  {id:'halloween',  grp:'season', name:'ฮาโลวีน',         desc:'ม่วงดำ · ฟักทอง · ค้างคาว · ผี'},
+  {id:'xmas',       grp:'season', name:'คริสต์มาส',       desc:'เขียวแดง · ต้นคริสต์มาส · หิมะ'},
   {id:'y2k',        grp:'bright', name:'Y2K สปาร์คเคิล',  desc:'ม่วงอ่อน · เขียวมะนาว · ประกาย'},
 ];
 const THK='bapp_theme';
@@ -2555,7 +2591,7 @@ function applyTheme(){
 }
 function useTheme(id){ TH.current=id; thSave(); applyTheme(); rSettings(); }
 function addTheme(id){ if(!TH.owned.includes(id)) TH.owned.push(id); thSave(); rSettings(); }
-const TH_GROUPS=[['cute','น่ารักพาสเทล'],['dark','มืดเท่ สายเบียว'],['race','รถแข่ง'],['bright','สดใสเก๋']];
+const TH_GROUPS=[['season','เทศกาล'],['cute','น่ารักพาสเทล'],['dark','มืดเท่ สายเบียว'],['race','รถแข่ง'],['bright','สดใสเก๋']];
 function themeSection(){
   const mine=THEMES.filter(t=>TH.owned.includes(t.id)), shop=THEMES.filter(t=>!TH.owned.includes(t.id));
   let h=`<div class="sh sh-first">ธีมของฉัน</div><div class="th-grid">`
