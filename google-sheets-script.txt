@@ -7,6 +7,8 @@
  *   { action: "uploadPhoto", id, date, type, data }   เก็บรูปใบเสร็จ (base64) ใน Google Drive
  *   { action: "trashPhotos", fileIds: [...] }         ย้ายรูปที่เลิกใช้ไปถังขยะของ Drive
  *
+ * รายการหนึ่งมีสลิปได้หลายรูป (photoUrls) จะเป็นลิงก์ "รูป 1  รูป 2" ในช่องเดียว
+ *
  * รูปเก็บในโฟลเดอร์ "รูปใบเสร็จ (แอปงบวันนี้)" แบบส่วนตัว เปิดได้เฉพาะเจ้าของบัญชี
  */
 
@@ -91,6 +93,18 @@ function toValues_(row) {
 
 // ช่องรูป: ลิงก์ "ดูรูป" ถ้าส่งรูปแล้ว, "มี (กำลังส่งรูป)" ถ้ายังไม่ถึง, ว่างถ้าไม่มีรูป
 function photoCell_(row) {
+  // หลายรูป: "รูป 1  รูป 2  รูป 3" แต่ละคำเป็นลิงก์
+  var urls = row.photoUrls || [];
+  if (urls.length > 1) {
+    var labels = urls.map(function (_, i) { return "รูป " + (i + 1); });
+    var b = SpreadsheetApp.newRichTextValue().setText(labels.join("  "));
+    var at = 0;
+    labels.forEach(function (label, i) {
+      b.setLinkUrl(at, at + label.length, urls[i]);
+      at += label.length + 2;
+    });
+    return b.build();
+  }
   if (row.photoUrl) {
     return SpreadsheetApp.newRichTextValue().setText("ดูรูป").setLinkUrl(row.photoUrl).build();
   }

@@ -945,6 +945,81 @@ input[type=number]{-moz-appearance:textfield}
 .hf-det[open]>summary{border-radius:var(--rl) var(--rl) 0 0;border-bottom:none}
 .hf-det[open] .hf-bar{border-radius:0 0 var(--rl) var(--rl);margin-bottom:0}
 
+.hc-sub{font-size:.92rem;color:var(--hero-sub);margin-top:6px;position:relative;z-index:1}
+.hc-sub b{color:var(--t1)}
+.hc-how{display:flex;gap:6px;align-items:flex-start;margin-top:12px;padding-top:10px;border-top:1px dashed var(--hero-line);
+  font-size:.86rem;line-height:1.5;color:var(--hero-sub);position:relative;z-index:1}
+.hc-how .i{flex-shrink:0;margin-top:.2em}
+.now-card{background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);padding:6px 16px;box-shadow:var(--sh-card)}
+.nc-row{display:flex;justify-content:space-between;gap:10px;padding:9px 0;font-size:.95rem;color:var(--t2);border-bottom:1px dashed var(--b1)}
+.nc-row:last-child{border-bottom:none}
+.nc-row b{color:var(--t1);white-space:nowrap}
+.nc-row.tot{font-weight:700;color:var(--t1)}
+.nc-row.tot b{color:var(--vl);font-size:1.1rem}
+.nc-row b.neg{color:var(--r)}
+.re-day{display:flex;justify-content:space-between;gap:8px;padding:9px 16px;background:var(--s3);
+  font-size:.86rem;font-weight:700;color:var(--t1);border-bottom:1px solid var(--b1)}
+.re-day span:last-child{color:var(--t2);font-weight:600}
+.re-ph{display:inline-flex;align-items:center;gap:2px;font-size:.8rem;color:var(--vl);vertical-align:middle}
+.he-sub{display:block;font-size:.8rem;color:var(--t3);font-style:normal}
+.he-ph small{font-size:.7rem;font-weight:700;margin-left:1px}
+.lf-step{display:flex;align-items:center;gap:8px;padding:12px 18px 0;font-size:.9rem;font-weight:700;color:var(--t2)}
+.lf-n{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--vs);color:var(--vl);font-size:.78rem;font-weight:800;flex-shrink:0}
+.lc #log-cats .cat-row{border-bottom:none;padding-top:8px}
+.lc .ln{border-top:none}
+#lp-prev{display:flex;flex-wrap:wrap;gap:8px;padding:0 18px;align-items:center}
+#lp-prev:not(:empty){padding:4px 18px 10px}
+.ph-th{position:relative;display:inline-flex}
+.ph-th img{width:56px;height:56px;object-fit:cover;border-radius:10px;border:1px solid var(--b2)}
+.ph-th button{position:absolute;top:-8px;right:-8px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;
+  font-size:.8rem;border:none;cursor:pointer;background:var(--s4);color:var(--t1)}
+.ph-n{font-size:.86rem;color:var(--t2)}
+.xi{margin:0 14px 10px;padding:10px;border:1px solid var(--b2);border-radius:14px;background:var(--s3);display:flex;flex-direction:column;gap:8px}
+.xi-top{display:flex;align-items:center;gap:8px}
+.xi select,.xi input{min-height:44px;border-radius:10px;border:1px solid var(--b2);background:var(--s2);color:var(--t1);font:inherit;font-size:16px;padding:0 10px;min-width:0}
+.xi select{flex:1}
+.xi-amt{width:110px;flex-shrink:0}
+.xi-add-row{padding:4px 14px 12px}
+.xi-add-row .btn2{width:100%;justify-content:center;border-style:dashed}
+.xi-total{margin:0 14px 12px;padding:10px 12px;border-radius:12px;background:var(--vs);color:var(--t1);font-size:.95rem;display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}
+.xi-total span{font-size:.82rem;color:var(--t2);width:100%}
+.hs{display:flex;align-items:center;gap:8px;min-height:50px;padding:0 14px;margin-bottom:10px;background:var(--s2);
+  border:1px solid var(--b2);border-radius:var(--rl);color:var(--t3);font-size:1.1rem;box-shadow:var(--sh-card)}
+.hs:focus-within{border-color:var(--vc)}
+.hs input{flex:1;min-width:0;border:none;outline:none;background:transparent;color:var(--t1);font:inherit;font-size:16px;min-height:48px}
+.hs input::placeholder{color:var(--ph)}
+.hd-lbl{font-size:.92rem}
+.rule-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.rule{min-height:40px;padding:0 13px;border-radius:99px;border:1px solid var(--b2);background:var(--s2);color:var(--t2);
+  font:inherit;font-size:.86rem;font-weight:700;cursor:pointer}
+.rule.on{background:var(--vc);border-color:var(--vc);color:var(--on-acc)}
+.rule-who{margin-top:10px;padding:12px 14px;border-radius:14px;background:var(--s2);border:1px solid var(--b1);font-size:.88rem;line-height:1.6;color:var(--t2)}
+.rule-who b{color:var(--t1)}
+#vw-list{max-height:76dvh;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.vw-item{display:flex;flex-direction:column;gap:6px}
+.vw-item img{width:100%;border-radius:14px;background:var(--s2)}
+.vw-empty{padding:30px 16px;text-align:center;color:var(--t2);background:var(--s2);border-radius:14px}
+.vw-link{display:inline-flex;align-items:center;gap:6px;color:#fff;font-size:.9rem;text-decoration:underline}
+
+.cr-box{margin-top:10px}
+.cr-simple{background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);overflow:hidden}
+.cr-f{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;border-bottom:1px solid var(--b1);font-size:.98rem;font-weight:600;color:var(--t1)}
+.cr-f>span:first-child{display:flex;align-items:center;gap:8px}
+.cr-f .i{color:var(--vl)}
+.cr-in{display:flex;align-items:center;gap:6px;color:var(--t2);font-weight:700}
+.cr-in input{width:84px;min-height:46px;border-radius:12px;border:1px solid var(--b2);background:var(--bg);color:var(--t1);
+  font:inherit;font-size:18px;font-weight:700;text-align:center}
+.cr-auto{background:var(--gs);border-bottom:none}
+.cr-auto small{font-weight:500;color:var(--t3);font-size:.8rem}
+.cr-auto b{font-size:1.3rem;color:var(--g);min-width:84px;text-align:center}
+#cr-sum:not(:empty){padding:10px 14px;font-size:.9rem;font-weight:700}
+.cr-bad{color:var(--r);display:inline-flex;gap:6px;align-items:center}
+
+.plan-fam{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-bottom:12px;padding:10px 12px;border-radius:12px;
+  background:rgba(244,114,182,0.12);color:var(--t1);font-size:.95rem}
+.plan-fam .i{color:#F472B6}
+.plan-fam span{width:100%;font-size:.84rem;color:var(--t2)}
+
 /* ── LINE ICONS */
 .i{width:1em;height:1em;flex-shrink:0;display:inline-block;vertical-align:-0.15em}
 .fl .ic{display:inline-flex;color:var(--vl);font-size:1rem}
@@ -1044,10 +1119,8 @@ input[type=number]{-moz-appearance:textfield}
 <!-- ▸ RECEIPT PHOTO VIEWER -->
 <div id="viewer" hidden onclick="if(event.target===this)closeViewer()">
   <div class="vw-box">
-    <img id="vw-img" alt="รูปใบเสร็จ"/>
-    <div id="vw-empty" hidden>รูปนี้ไม่ได้อยู่ในเครื่องนี้ เปิดดูได้ใน Google Drive</div>
+    <div id="vw-list"></div>
     <div class="vw-bar">
-      <a id="vw-drive" target="_blank" rel="noopener">เปิดใน Google Drive</a>
       <button onclick="closeViewer()">ปิด</button>
     </div>
   </div>
@@ -1120,6 +1193,8 @@ const IC={
   'coins':'<circle cx="9" cy="9" r="6"/><path d="M15.5 9.5a6 6 0 1 1-6 6"/>',
   'star-fill':'<path fill="currentColor" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/>',
   'circle':'<circle cx="12" cy="12" r="8"/>',
+  'family':'<path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M12 17.5s-3-1.8-3-3.6a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 1.8-3 3.6-3 3.6z"/>',
+  'search':'<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
   'food':'<path d="M7 3v8M4.5 3v5a2.5 2.5 0 0 0 5 0V3M7 11v10M17 21V3c-2.2 1-3.5 3.6-3.5 7.5 0 1.6 1 2.5 3.5 2.5"/>',
   'bus':'<rect x="4" y="3.5" width="16" height="14" rx="3"/><path d="M4 11h16M7.5 21v-3.5M16.5 21v-3.5M8 14.5h.01M16 14.5h.01"/>',
   'bag':'<path d="M5 8h14l-1.2 13H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/>',
@@ -1142,6 +1217,7 @@ const CATS=[
   {id:'bill',  name:'บิล/ค่าน้ำไฟ', icon:'bolt',   c:'#EAB308'},
   {id:'health',name:'สุขภาพ',      icon:'health', c:'#EF4444'},
   {id:'fun',   name:'บันเทิง',     icon:'music',  c:'#8B5CF6'},
+  {id:'family',name:'ให้ครอบครัว',  icon:'family', c:'#F472B6'},
   {id:'other', name:'อื่นๆ',        icon:'dots',   c:'#94A3B8'},
 ];
 const catOf = e => CATS.find(c=>c.id===e.cat) || CATS[CATS.length-1];
@@ -1155,7 +1231,8 @@ function markChip(root,id){ root?.querySelectorAll('.chip').forEach(b=>b.classLi
 const ic = n => `<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[n]||''}</svg>`;
 
 
-function todayISO(){ return new Date().toISOString().split('T')[0]; }
+const isoOf = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+function todayISO(){ return isoOf(new Date()); }
 
 function daysUntil(dateStr){
   if(!dateStr) return 0;
@@ -1167,12 +1244,20 @@ function daysUntil(dateStr){
 function labelDate(ds){
   const t=todayISO();
   const yd=new Date(); yd.setDate(yd.getDate()-1);
-  const y=yd.toISOString().split('T')[0];
+  const y=isoOf(yd);
   if(ds===t) return 'วันนี้';
   if(ds===y) return 'เมื่อวาน';
   const d=new Date(ds+'T00:00:00');
   const M=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
   return `${d.getDate()} ${M[d.getMonth()]}`;
+}
+
+// หัววันในประวัติ เช่น "วันนี้ · ศ. 6 พ.ย." หรือ "พ. 4 พ.ย."
+function dayHead(ds){
+  const d=new Date(ds+'T00:00:00'), rel=labelDate(ds);
+  const W=['อา.','จ.','อ.','พ.','พฤ.','ศ.','ส.'], M=['ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.'];
+  const full=`${W[d.getDay()]} ${d.getDate()} ${M[d.getMonth()]}${d.getFullYear()!==new Date().getFullYear()?' '+(d.getFullYear()+543):''}`;
+  return rel==='วันนี้'||rel==='เมื่อวาน'?`${rel} · ${full}`:full;
 }
 
 function dayAbbr(ds){
@@ -1197,45 +1282,52 @@ function greet(){
 /* ══════════════════════════════════════════════
    CORE CALC
 ══════════════════════════════════════════════ */
+// รายจ่ายที่หักจากยอดเงิน = ที่จดหลังจากใส่ยอดเงินในบัญชีครั้งล่าสุด
+const sinceBal = e => !S.balanceAt || e.id>S.balanceAt;
+// วันที่เหลือ รวมวันนี้ ไม่รวมวันเงินเดือนเข้า; ถ้ากรอกจำนวนวันเอง ให้นับถอยหลังจากวันที่กรอก
+function daysLeft(){
+  if(S.salaryDate) return daysUntil(S.salaryDate);
+  const m=fN(S.manualDays);
+  if(m<=0) return 0;
+  const from=S.daysSetOn||S.trackerStart;
+  if(!from) return m;
+  const gone=Math.round((new Date(todayISO()+'T00:00:00')-new Date(from+'T00:00:00'))/86400000);
+  return Math.max(1,m-gone);
+}
 function C(){
   const bal = fN(S.balance), req = fN(S.reqSavings);
-  const days = S.salaryDate ? daysUntil(S.salaryDate)
-             : fN(S.manualDays)||0;
+  const days = daysLeft();
   const tgt  = fN(S.targetDaily);
   const useTgt = S.targetDaily.trim()!=='' && tgt>0;
-  const spend  = bal - req;
-  const daily  = days>0 ? spend/days : 0;
+  const td   = todayISO();
+  const used = S.entries.filter(sinceBal).reduce((a,e)=>a+e.amount,0);
+  const tdUsed = S.entries.filter(e=>e.date===td&&sinceBal(e)).reduce((a,e)=>a+e.amount,0);
+  const start  = bal - req;            // เงินที่ใช้ได้ ก่อนหักรายจ่ายที่จด
+  const spend  = start - used;         // เงินเหลือใช้ตอนนี้
+  // งบวันนี้ = เงินที่มีตอนเริ่มวันนี้ ÷ วันที่เหลือ (ใช้เกินเมื่อวาน วันนี้งบจะลดลงเอง)
+  const daily  = days>0 ? (spend+tdUsed)/days : 0;
   const weekly = daily*7;
   const totSp  = useTgt ? tgt*days : 0;
   const remBuf = useTgt ? spend-totSp : 0;
   const dLast  = useTgt&&tgt>0 ? spend/tgt : 0;
   const hasData = S.balance!=='' || S.reqSavings!=='' || S.salaryDate!=='' || S.manualDays!=='';
-  return {bal,req,days,tgt,useTgt,spend,daily,weekly,totSp,remBuf,dLast,hasData};
+  return {bal,req,days,tgt,useTgt,start,used,tdUsed,spend,daily,weekly,totSp,remBuf,dLast,hasData};
 }
 
 function T(){
   const c = C();
   const total  = S.entries.reduce((a,e)=>a+e.amount,0);
-  const rem    = c.spend - total;
-  const td     = todayISO();
-  const tdSpent= S.entries.filter(e=>e.date===td).reduce((a,e)=>a+e.amount,0);
+  const rem    = c.spend;
+  const tdSpent= c.tdUsed;
   const tdPct  = c.daily>0 ? clamp((tdSpent/c.daily)*100,0,120) : 0;
-
-  // days remaining (auto-adjust if started tracking)
-  let drem = c.days;
-  if(S.trackerStart && c.days>0){
-    const st=new Date(S.trackerStart+'T00:00:00');
-    const now=new Date(); now.setHours(0,0,0,0);
-    drem=Math.max(1, c.days - Math.floor((now-st)/86400000));
-  }
-  const newDaily = drem>0 ? rem/drem : 0;
-
+  const drem   = c.days;
+  const newDaily = c.daily;
+  const todayLeft = c.daily - tdSpent;
   const uniq   = [...new Set(S.entries.map(e=>e.date))].length;
   const avg    = uniq>0 ? total/uniq : 0;
   let trend='neutral';
   if(avg>0) trend=avg<=c.daily*0.88?'under':avg<=c.daily*1.12?'ontrack':'over';
-
-  return {...c,total,rem,tdSpent,tdPct,drem,newDaily,avg,trend,uniq};
+  return {...c,total,rem,tdSpent,tdPct,drem,newDaily,todayLeft,avg,trend,uniq};
 }
 
 function safety(rem,spend,useT){
@@ -1303,74 +1395,36 @@ function rHome(){
     return;
   }
 
-  // Hero value logic
-  const heroV   = t.tdSpent>0 ? t.tdSpent>c.daily ? -(t.tdSpent-c.daily) : c.daily-t.tdSpent : c.spend;
-  const heroLbl = t.tdSpent>0 ? (heroV<0?'เกินงบวันนี้':'เหลือใช้วันนี้') : 'เงินที่ใช้ได้ทั้งหมด';
-  const heroCol = heroV<0?'var(--r)':'var(--t1)';
-
-  // Savings
   const sg=fN(S.savingGoal), sa=fN(S.savedAmount);
   const sPct = sg>0 ? clamp((sa/sg)*100,0,100) : 0;
-
-  // Today progress
+  const over = t.todayLeft<0;
   const tdPct = clamp(t.tdPct,0,100);
   const tdCol = tdPct<=80?'var(--g)':tdPct<=100?'var(--a)':'var(--r)';
-  const tdOver= t.tdSpent - c.daily;
 
-  let h=`<div class="w">`;
-
-  // Hero card
-  h+=`<div class="top-gap"></div>
-  <div class="hc">
-    <div class="hc-lbl">${heroLbl}</div>
-    <div class="hc-val" style="color:${heroCol}">${heroV<0?'-':''}${fmt(Math.abs(heroV))}<span class="cu">฿</span></div>
-    <div class="hc-foot">
-      <div class="hf"><div class="v">${c.daily>0?fmt(c.daily,0):'—'}</div><div class="l">งบ/วัน</div></div>
-      <div class="hf-d"></div>
-      <div class="hf"><div class="v">${c.days||'—'}</div><div class="l">วันถึงเงินเดือน</div></div>
-      <div class="hf-d"></div>
-      <div class="hf"><div class="v">${fmt(t.tdSpent,0)}</div><div class="l">ใช้วันนี้</div></div>
-    </div>
-  </div>
-  <button class="quick-log" onclick="go('track');$('la')?.focus()">${ic('plus')} บันทึกรายจ่าย</button>`;
-
-  // Today progress
-  if(c.daily>0){
-    h+=`<div class="tdc">
-      <div class="td-hdr">
-        <span style="font-size:.88rem;font-weight:700;color:var(--t2)">งบวันนี้ ${fmt(c.daily,0)} ฿</span>
-        ${tdOver>0.5
-          ?`<span class="td-tag over">เกิน ${fW(tdOver)} ฿</span>`
-          :tdOver<-0.5
-            ?`<span class="td-tag ok">ประหยัด ${fW(-tdOver)} ฿</span>`
-            :t.tdSpent>0
-              ?`<span class="td-tag eq">ตามแผน</span>`
-              :`<span style="font-size:.84rem;color:var(--t3)">ยังไม่มีรายการ</span>`}
+  let h=`<div class="w"><div class="top-gap"></div>`;
+  if(c.days>0){
+    h+=`<div class="hc">
+      <div class="hc-lbl">${over?'วันนี้ใช้เกินงบไปแล้ว':'วันนี้ใช้ได้อีก'}</div>
+      <div class="hc-val" style="color:${over?'var(--r)':'var(--t1)'}">${over?'-':''}${fW(Math.abs(t.todayLeft))}<span class="cu">฿</span></div>
+      <div class="hc-sub">งบวันนี้ <b>${fW(c.daily)} ฿</b> · ใช้ไปแล้ว <b>${fW(t.tdSpent)} ฿</b></div>
+      <div class="pt" style="height:8px;margin-top:10px;position:relative;z-index:1"><div class="pf" style="width:${tdPct}%;height:8px;background:${tdCol}"></div></div>
+      <div class="hc-foot">
+        <div class="hf"><div class="v">${c.spend<0?'-':''}${fW(c.spend)}</div><div class="l">เงินเหลือทั้งหมด</div></div>
+        <div class="hf-d"></div>
+        <div class="hf"><div class="v">${c.days}</div><div class="l">วันที่เหลือ</div></div>
+        <div class="hf-d"></div>
+        <div class="hf"><div class="v">${fW(c.daily)}</div><div class="l">ใช้ได้วันละ</div></div>
       </div>
-      <div class="pt" style="height:8px">
-        <div class="pf" style="width:${tdPct}%;height:8px;background:${tdCol}"></div>
-      </div>
-      <div class="td-row">
-        <span style="font-size:1.3rem;font-weight:700;color:var(--t1)">${fmt(t.tdSpent,0)}<span style="font-size:.86rem;opacity:.5;margin-left:3px">฿</span></span>
-        <span style="font-size:.86rem;color:var(--t3)">${tdPct.toFixed(0)}% ของงบวันนี้</span>
-      </div>
+      <div class="hc-how">${ic('bulb')} คิดจาก เงินที่เหลือ ${fW(c.spend+c.tdUsed)} ฿ ÷ ${c.days} วัน (รวมวันนี้) = วันละ ${fW(c.daily)} ฿</div>
+    </div>`;
+  } else {
+    h+=`<div class="hc">
+      <div class="hc-lbl">เงินเหลือใช้ทั้งหมด</div>
+      <div class="hc-val">${c.spend<0?'-':''}${fW(c.spend)}<span class="cu">฿</span></div>
+      <div class="hc-how">${ic('bulb')} ใส่วันเงินเดือนเข้าในหน้า "คำนวณ" แอปจะบอกว่าใช้ได้วันละเท่าไหร่</div>
     </div>`;
   }
-
-  // Overview stats
-  h+=`<div class="sh">สรุปงบ</div>
-  <div class="g2">
-    <div class="sc">
-      <div class="sc-lbl">${ic('wallet')} เงินใช้ได้</div>
-      <div class="sc-val ${c.spend<0?'neg':''}">${c.spend<0?'-':''}${fmt(Math.abs(c.spend),0)}</div>
-      <div class="sc-sub">บาท (หลังหักเงินเก็บ)</div>
-    </div>
-    <div class="sc ${t.rem/c.spend>0.3?'gi':''}">
-      <div class="sc-lbl">${ic('shield')} เงินคงเหลือ</div>
-      <div class="sc-val ${t.rem>=0?(t.rem/c.spend>0.3?'pos':'war'):'neg'}">${t.rem<0?'-':''}${fmt(Math.abs(t.rem),0)}</div>
-      <div class="sc-sub">${t.rem>=0?'บาทก่อนเงินเดือน':'บาท (ขาดเงิน!)'}</div>
-    </div>
-  </div>`;
+  h+=`<button class="quick-log" onclick="go('track');$('ln')?.focus()">${ic('plus')} จดรายจ่าย</button>`;
 
   // Savings mini (if set)
   if(sg>0){
@@ -1391,27 +1445,30 @@ function rHome(){
     </div>`;
   }
 
-  // Recent entries
-  const rec=S.entries.slice(0,5);
+  // Recent entries แบ่งตามวัน
+  const rec=S.entries.slice(0,8);
   h+=`<div class="sh">รายการล่าสุด</div>
-  <div style="background:var(--s2);border:1px solid var(--b1);border-radius:var(--rl);overflow:hidden">`;
+  <div class="lc">`;
   if(rec.length){
+    let last='';
     rec.forEach(e=>{
-      h+=`<div class="re-item">
+      if(e.date!==last){
+        last=e.date;
+        const dt=S.entries.filter(x=>x.date===e.date).reduce((a,x)=>a+x.amount,0);
+        h+=`<div class="re-day"><span>${dayHead(e.date)}</span><span>รวม ${fW(dt)} ฿</span></div>`;
+      }
+      h+=`<div class="re-item" onclick="openEdit(${e.id})" style="cursor:pointer">
         <span class="re-cat" style="${catStyle(catOf(e))}">${ic(catOf(e).icon)}</span>
-        <div class="re-note ${!e.note?'em':''}">${e.note?esc(e.note):catOf(e).name}</div>
-        <div class="re-r">
-          <div class="re-amt">${fmt(e.amount)} ฿</div>
-          <div class="re-date">${labelDate(e.date)}</div>
-        </div>
+        <div class="re-note ${!e.note?'em':''}">${e.note?esc(e.note):catOf(e).name}${nPh(e)?` <span class="re-ph">${ic('image')}${nPh(e)>1?nPh(e):''}</span>`:''}</div>
+        <div class="re-r"><div class="re-amt">${fmt(e.amount)} ฿</div><div class="re-date">${e.ts||''}</div></div>
       </div>`;
     });
-    if(S.entries.length>5)
+    if(S.entries.length>8)
       h+=`<button class="more-btn" onclick="go('track')">ดูทั้งหมด ${S.entries.length} รายการ →</button>`;
   } else {
     h+=`<div class="empty" style="padding:18px">
       <span class="empty-i" style="font-size:1.6rem">${ic('receipt')}</span>
-      <p style="font-size:.86rem">ยังไม่มีรายการ — <a href="javascript:go('track')" style="color:var(--vl)">บันทึกเลย</a></p>
+      <p style="font-size:.86rem">ยังไม่มีรายการ — <a href="javascript:go('track')" style="color:var(--vl)">จดเลย</a></p>
     </div>`;
   }
   h+=`</div>`;
@@ -1433,9 +1490,9 @@ function rCalc(){
   <div class="ip">
     <div class="fi">
       <div class="fm">
-        <div class="fl"><span class="ic">${ic('bank')}</span>ยอดเงินในบัญชี</div>
+        <div class="fl"><span class="ic">${ic('bank')}</span>ยอดเงินในบัญชีตอนนี้</div>
         <input id="inp-balance" class="fi-inp" type="number" value="${S.balance}" placeholder="0.00" inputmode="decimal"
-          oninput="S.balance=this.value;ss();uCalcOut()"/>
+          oninput="S.balance=this.value;S.balanceAt=Date.now();ss();uCalcOut()"/>
       </div><div class="fu">บาท</div>
     </div>
     <div class="fi">
@@ -1457,7 +1514,7 @@ function rCalc(){
       <div class="fm">
         <div class="fl"><span class="ic">${ic('hash')}</span>หรือกรอกวันเอง<span class="opt">ถ้าไม่รู้วันที่</span></div>
         <input id="inp-manualDays" class="fi-inp" type="number" value="${S.manualDays}" placeholder="จำนวนวัน" inputmode="numeric"
-          oninput="S.manualDays=this.value;ss();uCalcOut()"/>
+          oninput="S.manualDays=this.value;S.daysSetOn=todayISO();ss();uCalcOut()"/>
       </div><div class="fu">วัน</div>
     </div>
     <div class="fi">
@@ -1469,6 +1526,7 @@ function rCalc(){
     </div>
   </div>
   </div>
+  <p class="hint" style="margin:8px 2px 0">ใส่ยอดเงินในบัญชีตอนนี้ แล้วจดรายจ่ายตามปกติ แอปจะหักให้เอง ถ้าเช็คยอดในแอปธนาคารแล้วไม่ตรง ให้แก้ยอดตรงนี้ใหม่</p>
   <div id="calc-out"></div>
   </div>`;
   el.innerHTML=h;
@@ -1508,12 +1566,18 @@ function uCalcOut(){
         <span class="sb-badge">${sv.badge}</span>
       </div>`;
     }
-    h+=`<div class="sh">ผลการคำนวณ</div>
-    <div class="hc">
-      <div class="hc-lbl">${ic('calendar')} งบประมาณแนะนำต่อวัน</div>
+    h+=`<div class="sh">ตอนนี้</div>
+    <div class="now-card">
+      <div class="nc-row"><span>ยอดเงินในบัญชี</span><b>${fmt(c.bal,0)}</b></div>
+      <div class="nc-row"><span>− เงินเก็บห้ามแตะ</span><b>${fmt(c.req,0)}</b></div>
+      <div class="nc-row"><span>− ใช้ไปแล้ว (ที่จดหลังใส่ยอดเงิน)</span><b>${fmt(c.used,0)}</b></div>
+      <div class="nc-row tot"><span>= เงินเหลือใช้</span><b class="${c.spend<0?'neg':''}">${c.spend<0?'-':''}${fmt(Math.abs(c.spend),0)} ฿</b></div>
+    </div>
+    <div class="hc" style="margin-top:10px">
+      <div class="hc-lbl">${ic('calendar')} ใช้ได้วันละ (คิดจากเงินที่เหลือ)</div>
       <div class="hc-val">${dDays>0&&c.spend>0?fmt(c.daily):'—'}<span class="cu">฿</span></div>
       <div class="hc-foot">
-        <div class="hf"><div class="v">${fmt(c.spend)}</div><div class="l">ใช้ได้ทั้งหมด</div></div>
+        <div class="hf"><div class="v">${fmt(c.spend,0)}</div><div class="l">เงินเหลือใช้</div></div>
         <div class="hf-d"></div>
         <div class="hf"><div class="v">${dDays||'—'}</div><div class="l">วันจนเงินเดือน</div></div>
         <div class="hf-d"></div>
@@ -1524,7 +1588,7 @@ function uCalcOut(){
       <div class="sc">
         <div class="sc-lbl">${ic('wallet')} เงินใช้ได้</div>
         <div class="sc-val ${spC}">${c.spend<0?'-':''}${fmt(Math.abs(c.spend))}<span class="u">฿</span></div>
-        <div class="sc-sub">${fmt(c.bal)} − ${fmt(c.req)}</div>
+        <div class="sc-sub">${fmt(c.bal,0)} − ${fmt(c.req,0)} − ใช้ไป ${fmt(c.used,0)}</div>
       </div>
       ${c.useTgt
         ?`<div class="sc">
@@ -1622,20 +1686,28 @@ function rTrack(){
   // Log form (อยู่บนสุด หาง่าย)
   h+=`<div class="sh sh-first">จดรายจ่าย</div>
   <div class="lc">
+    <div class="lf-step"><span class="lf-n">1</span>ประเภท</div>
+    <div id="log-cats">${catChips(LCAT,'pickCat')}</div>
+    <div class="lf-step"><span class="lf-n">2</span>ชื่อรายการ และสลิป</div>
+    <div class="ln">
+      <input class="ln-inp" type="text" id="ln" placeholder="เช่น ยิม, ค่าเน็ต, ข้าวกลางวัน" aria-label="ชื่อรายการ"
+        onkeydown="if(event.key==='Enter')$('la').focus()"/>
+      <label class="lp-cam" aria-label="แนบสลิป ได้หลายรูป">${ic('camera')}
+        <input type="file" accept="image/*" multiple id="lp-inp" onchange="pickPhoto(this)" hidden/></label>
+    </div>
+    <div id="lp-prev"></div>
+    <div class="lf-step"><span class="lf-n">3</span>ราคา</div>
     <div class="la">
-      <input class="la-inp" type="number" id="la" placeholder="0" inputmode="decimal" min="0" aria-label="จำนวนเงิน"
-        onkeydown="if(event.key==='Enter')logS()"/>
+      <input class="la-inp" type="number" id="la" placeholder="0" inputmode="decimal" min="0" aria-label="ราคา"
+        oninput="sumItems()" onkeydown="if(event.key==='Enter')logS()"/>
       <div class="fu">บาท</div>
     </div>
-    <div id="log-cats">${catChips(LCAT,'pickCat')}</div>
-    <div class="ln">
-      <input class="ln-inp" type="text" id="ln" placeholder="บันทึกย่อ (ไม่ใส่ก็ได้)" aria-label="บันทึกย่อ"
-        onkeydown="if(event.key==='Enter')logS()"/>
-      <div id="lp-prev"></div>
-      <label class="lp-cam" aria-label="แนบรูปใบเสร็จ">${ic('camera')}
-        <input type="file" accept="image/*" id="lp-inp" onchange="pickPhoto(this)" hidden/></label>
+    <div id="xi-list"></div>
+    <div class="xi-add-row">
+      <button class="btn2" onclick="addItem()">${ic('plus')} มีหลายรายการในสลิปนี้</button>
     </div>
-    <button class="log-btn" onclick="logS()">${ic('plus')} บันทึก</button>
+    <div id="xi-sum"></div>
+    <button class="log-btn" onclick="logS()">${ic('check')} บันทึก</button>
   </div>`;
 
   // Status
@@ -1652,7 +1724,7 @@ function rTrack(){
       <div class="sc-sub">วัน</div>
     </div>
     <div class="sc hi">
-      <div class="sc-lbl">งบใหม่/วัน</div>
+      <div class="sc-lbl">ใช้ได้วันละ</div>
       <div class="sc-val lg acc">${t.drem>0?fW(t.newDaily):'—'}</div>
       <div class="sc-sub">฿</div>
     </div>
@@ -1690,42 +1762,47 @@ function rTrack(){
 
   // History
   if(S.entries.length){
-    h+=`<div class="sh">ประวัติ</div>${histFilter()}`;
-    const list=S.entries.filter(histMatch);
-    if(!list.length) h+=`<div class="empty" style="padding:20px"><p>ไม่มีรายการตามที่เลือก</p></div>`;
-    else h+=`<p class="hint">แตะรายการเพื่อแก้ไข</p>`;
-    const grp={};
-    list.forEach(e=>{if(!grp[e.date])grp[e.date]=[];grp[e.date].push(e);});
-    Object.keys(grp).sort((a,b)=>b.localeCompare(a)).forEach(ds=>{
-      const es=grp[ds], dt=es.reduce((a,e)=>a+e.amount,0);
-      const onBudget=t.daily>0&&dt<=t.daily;
-      h+=`<div class="hd">
-        <div class="hd-hdr">
-          <span class="hd-lbl">${labelDate(ds)}</span>
-          <span class="hd-tot">${fmt(dt,0)} ฿ ${t.daily>0&&HF.cat==='all'?(onBudget?'· <span style="color:var(--g)">ในงบ</span>':'· <span style="color:var(--r)">เกินงบ</span>'):''}</span>
-        </div>`;
-      es.forEach(e=>{
-        const c=catOf(e);
-        h+=`<div class="he" role="button" tabindex="0" aria-label="แก้ไขรายการ ${esc(e.note||c.name)}"
-            onclick="if(!event.target.closest('button'))openEdit(${e.id})" onkeydown="if(event.key==='Enter')openEdit(${e.id})">
-          <span class="he-cat" style="${catStyle(c)}" title="${c.name}">${ic(c.icon)}</span>
-          <span class="he-nt ${!e.note?'em':''}">${e.note?esc(e.note):c.name}<span style="display:block;font-size:.8rem;color:var(--t3);font-style:normal">${e.ts||''} · ${c.name}</span></span>
-          ${e.photo?`<button class="he-ph" aria-label="ดูรูปใบเสร็จ" onclick="openPhoto(${e.id})">${ic('image')}</button>`:''}
-          <span class="he-am">${fmt(e.amount)} ฿</span>
-          <button class="he-dl" aria-label="ลบรายการ" onclick="delE(${e.id})">${ic('x')}</button>
-        </div>`;
-      });
-      h+=`</div>`;
-    });
+    h+=`<div class="sh">ประวัติ</div>
+    <div class="hs">${ic('search')}<input type="search" id="hq" placeholder="ค้นหา เช่น ค่าเน็ต" value="${esc(HF.q||'')}" aria-label="ค้นหาประวัติ"
+      oninput="HF.q=this.value;renderHist()"/></div>
+    <div id="hist"></div>`;
   } else {
-    h+=`<div class="empty"><span class="empty-i">${ic('receipt')}</span><p>ยังไม่มีรายการ<br>เริ่มบันทึกค่าใช้จ่ายแรกได้เลย</p></div>`;
+    h+=`<div class="empty"><span class="empty-i">${ic('receipt')}</span><p>ยังไม่มีรายการ<br>เริ่มจดรายจ่ายแรกได้เลย</p></div>`;
   }
 
   h+=S.entries.length
     ?`<button class="ghost" onclick="resetTrack()">${ic('trash')} ล้างประวัติทั้งหมด</button>`:'';
   h+=`<div style="height:8px"></div></div>`;
   el.innerHTML=h;
-  showPick();
+  showPick(); renderItems(); renderHist();
+}
+
+function renderHist(){
+  const el=$('hist');
+  if(!el) return;
+  const t=T(), list=S.entries.filter(histMatch);
+  let h=histFilter();
+  if(!list.length) h+=`<div class="empty" style="padding:20px"><p>ไม่พบรายการ${HF.q?` "${esc(HF.q)}"`:''}</p></div>`;
+  else h+=`<p class="hint">แตะรายการเพื่อแก้ไข</p>`;
+  const grp={};
+  list.forEach(e=>{(grp[e.date]=grp[e.date]||[]).push(e);});
+  Object.keys(grp).sort((a,b)=>b.localeCompare(a)).forEach(ds=>{
+    const es=grp[ds], dt=es.reduce((a,e)=>a+e.amount,0);
+    h+=`<div class="hd"><div class="hd-hdr"><span class="hd-lbl">${dayHead(ds)}</span><span class="hd-tot">รวม ${fmt(dt,0)} ฿</span></div>`;
+    es.forEach(e=>{
+      const c=catOf(e), n=nPh(e);
+      h+=`<div class="he" role="button" tabindex="0" aria-label="แก้ไขรายการ ${esc(e.note||c.name)}"
+          onclick="if(!event.target.closest('button'))openEdit(${e.id})" onkeydown="if(event.key==='Enter')openEdit(${e.id})">
+        <span class="he-cat" style="${catStyle(c)}" title="${c.name}">${ic(c.icon)}</span>
+        <span class="he-nt ${!e.note?'em':''}">${e.note?esc(e.note):c.name}<span class="he-sub">${e.ts||''} · ${c.name}</span></span>
+        ${n?`<button class="he-ph" aria-label="ดูสลิป ${n} รูป" onclick="openPhoto(${e.id})">${ic('image')}${n>1?`<small>${n}</small>`:''}</button>`:''}
+        <span class="he-am">${fmt(e.amount)} ฿</span>
+        <button class="he-dl" aria-label="ลบรายการ" onclick="delE(${e.id})">${ic('x')}</button>
+      </div>`;
+    });
+    h+=`</div>`;
+  });
+  el.innerHTML=h;
 }
 
 /* ══════════════════════════════════════════════
@@ -1757,7 +1834,7 @@ function rInsights(){
   let streak=0;
   const nd=new Date();
   for(let i=0;i<60;i++){
-    const ds=nd.toISOString().split('T')[0];
+    const ds=isoOf(nd);
     const dt=S.entries.filter(e=>e.date===ds).reduce((a,e)=>a+e.amount,0);
     if(dt===0&&i>0) break;
     if(dt>0&&c.daily>0){if(dt<=c.daily)streak++;else break;}
@@ -1775,7 +1852,7 @@ function rInsights(){
   const d7=[];
   for(let i=6;i>=0;i--){
     const d=new Date(); d.setDate(d.getDate()-i);
-    const ds=d.toISOString().split('T')[0];
+    const ds=isoOf(d);
     const spent=S.entries.filter(e=>e.date===ds).reduce((a,e)=>a+e.amount,0);
     d7.push({ds,spent,abbr:dayAbbr(ds),isToday:ds===todayISO()});
   }
@@ -1852,9 +1929,7 @@ function rInsights(){
 
   // Pace insight
   if(c.spend>0&&avg>0){
-    const remD=Math.max(1,c.days-uniq.length);
-    const proj=total+(avg*remD);
-    const projRemain=c.spend-proj;
+    const projRemain=c.spend-avg*Math.max(0,c.days-1)-Math.max(0,avg-c.tdUsed);
     const ok=projRemain>=0;
     h+=`<div class="tip ${ok?'good':'bad'}">
       <span class="tip-i">${ic(ok?'bulb':'alert')}</span>
@@ -1888,6 +1963,13 @@ function rSavings(){
     </div>
     <div class="fi">
       <div class="fm">
+        <div class="fl"><span class="ic">${ic('family')}</span>ให้ครอบครัวเดือนนี้<span class="opt">แก้ได้ทุกเดือน</span></div>
+        <input id="inp-family" class="fi-inp" type="number" value="${S.family||''}" placeholder="0" inputmode="decimal"
+          oninput="S.family=this.value;ss();uPlan()"/>
+      </div><div class="fu">บาท</div>
+    </div>
+    <div class="fi">
+      <div class="fm">
         <div class="fl"><span class="ic">${ic('shield')}</span>เงินฉุกเฉินที่มีตอนนี้<span class="opt">ไม่บังคับ</span></div>
         <input id="inp-emergencySaved" class="fi-inp" type="number" value="${S.emergencySaved}" placeholder="0" inputmode="decimal"
           oninput="S.emergencySaved=this.value;ss();uPlan()"/>
@@ -1914,6 +1996,13 @@ function rSavings(){
           oninput="S.savedAmount=this.value;ss();uSavOut();rHome()"/>
       </div><div class="fu">บาท</div>
     </div>
+    <div class="fi">
+      <div class="fm">
+        <div class="fl"><span class="ic">${ic('line-chart')}</span>พอร์ตลงทุนตอนนี้<span class="opt">หุ้น กองทุน</span></div>
+        <input id="inp-portValue" class="fi-inp" type="number" value="${S.portValue||''}" placeholder="เช่น 50000" inputmode="decimal"
+          oninput="S.portValue=this.value;ss()"/>
+      </div><div class="fu">บาท</div>
+    </div>
   </div>
   </div>
   <div id="sav-out"></div>
@@ -1923,70 +2012,128 @@ function rSavings(){
   uSavOut();
 }
 
-/* แผนเงินเดือนตามหลัก 50/30/20 + เงินฉุกเฉิน 6 เดือนของค่าใช้จ่ายจำเป็น
-   ระหว่างที่เงินฉุกเฉินยังไม่ครบ ส่วนออม 20% แบ่งครึ่งไปเติมเงินฉุกเฉิน */
+/* หลักการแบ่งเงินเดือนที่นิยม (kind: need จำเป็น, want ส่วนตัว, save ออม/ลงทุน, give ปลดหนี้/แบ่งปัน)
+   เงินฉุกเฉินเป้า 6 เดือนของค่าใช้จ่ายจำเป็น; ระหว่างยังไม่ครบ ใช้ครึ่งหนึ่งของส่วนออมเติมก่อน */
+const RULES={
+  'r503020':{name:'50/30/20', who:'มาตรฐานสากล เหมาะกับคนทั่วไป',
+    how:'แบ่งเป็น จำเป็น 50% ใช้ส่วนตัว 30% ออม 20% เป็นหลักที่นิยมที่สุด',
+    b:[['จำเป็น','ค่าเช่า อาหาร เดินทาง บิล หนี้',50,'need'],['ใช้ส่วนตัว','กินเที่ยว ช้อปปิ้ง งานอดิเรก',30,'want'],['ออม / ลงทุน','เงินฉุกเฉิน และเป้าหมายระยะยาว',20,'save']]},
+  'r8020':{name:'จ่ายตัวเองก่อน 80/20', who:'อยากง่ายที่สุด ไม่ต้องจดละเอียด',
+    how:'เงินเดือนเข้าปุ๊บ โอนออม 20% ทันที (ตั้งโอนอัตโนมัติได้) ที่เหลือ 80% ใช้ได้ตามสบาย',
+    b:[['ออมทันทีที่เงินเข้า','โอนแยกบัญชีก่อนใช้',20,'save'],['ใช้จ่ายทั้งหมด','ทั้งจำเป็นและส่วนตัว',80,'need']]},
+  'r702010':{name:'70/20/10', who:'ค่าครองชีพสูง หรือเพิ่งเริ่มทำงาน',
+    how:'ใช้จ่ายได้ 70% ออม 20% และอีก 10% ไว้ปลดหนี้ ทำบุญ หรือลงทุนเพิ่ม',
+    b:[['ใช้จ่าย','ทั้งจำเป็นและส่วนตัว',70,'need'],['ออม / ลงทุน','เงินฉุกเฉิน และเป้าหมายระยะยาว',20,'save'],['ปลดหนี้ / แบ่งปัน','ผ่อนหนี้เพิ่ม ทำบุญ ให้ครอบครัว',10,'give']]},
+  'r602020':{name:'60/20/20', who:'มีหนี้ต้องผ่อน หรือค่าใช้จ่ายจำเป็นสูง',
+    how:'ให้งบจำเป็นมากขึ้นเป็น 60% แต่ยังกันไว้ปลดหนี้หรือออม 20%',
+    b:[['จำเป็น','ค่าเช่า อาหาร เดินทาง บิล',60,'need'],['ใช้ส่วนตัว','กินเที่ยว ช้อปปิ้ง',20,'want'],['ปลดหนี้ / ออม','จ่ายหนี้ดอกสูงก่อน แล้วค่อยออม',20,'save']]},
+  'custom':{name:'กำหนดเอง', who:'ตั้งสัดส่วนเองตามที่สบายใจ',
+    how:'กรอกแค่ 2 ช่อง จำเป็นกี่ % และใช้ส่วนตัวกี่ % ที่เหลือแอปนับเป็นเงินออม/ลงทุนให้เอง', b:[]},
+  'jars':{name:'6 โถ', who:'อยากแบ่งเงินตามเป้าหมายชีวิต',
+    how:'แบ่งเงินเป็น 6 ก้อน แต่ละก้อนมีหน้าที่ชัดเจน (นิยมทำเป็นบัญชีแยก)',
+    b:[['จำเป็น','ค่าใช้จ่ายประจำ',55,'need'],['อิสรภาพทางการเงิน','ลงทุนระยะยาว ห้ามถอน',10,'save'],['ออมระยะยาว','ของชิ้นใหญ่ เที่ยว ฉุกเฉิน',10,'save'],
+       ['พัฒนาตัวเอง','คอร์สเรียน หนังสือ',10,'want'],['ใช้เล่น','รางวัลตัวเอง ใช้ให้หมดทุกเดือน',10,'want'],['ให้ผู้อื่น','ทำบุญ ช่วยครอบครัว',5,'give']]},
+};
+const KIND_C={need:'var(--vc)',want:'var(--bl)',save:'var(--g)',give:'var(--a)'};
+const JAR_C=['var(--vc)','var(--g)','#14B8A6','var(--bl)','#A855F7','var(--a)'];
 function plan(){
-  const sal=fN(S.salary), ef=fN(S.emergencySaved);
-  const needs=sal*.5, wants=sal*.3, save=sal*.2;
+  const gross=fN(S.salary), fam=Math.min(fN(S.family),gross), sal=gross-fam, ef=fN(S.emergencySaved), id=RULES[S.planRule]?S.planRule:'r503020', rule=RULES[id];
+  const cp=customPct();
+  const src=id==='custom'?[['จำเป็น','ค่าเช่า อาหาร เดินทาง บิล หนี้',cp.need,'need'],['ใช้ส่วนตัว','กินเที่ยว ช้อปปิ้ง งานอดิเรก',cp.want,'want'],
+    ['ออม / ลงทุน','ส่วนที่เหลือจากสองช่องด้านบน',cp.save,'save']]:rule.b;
+  const buckets=src.map(([name,desc,pct,kind],i)=>({name,desc,pct,kind,amt:sal*pct/100,col:id==='jars'?JAR_C[i]:KIND_C[kind]}));
+  const sum=k=>buckets.filter(x=>x.kind===k).reduce((a,x)=>a+x.amt,0);
+  const needs=sum('need'), save=sum('save'), spendable=sal-save-sum('give');
   const efTarget=needs*6, efFull=sal>0&&ef>=efTarget;
-  const emergency=efFull?0:save/2, savings=save-emergency;
+  const emergency=efFull?0:save/2;
   const months=emergency>0?Math.ceil((efTarget-ef)/emergency):0;
-  return {sal,ef,needs,wants,save,efTarget,efFull,emergency,savings,months,daily:(needs+wants)/30};
+  const total=buckets.reduce((a,x)=>a+x.pct,0);
+  return {gross,fam,sal,ef,id,rule,buckets,total,needs,save,efTarget,efFull,emergency,months,daily:spendable/30};
+}
+// สัดส่วนกำหนดเอง: เก็บแค่ จำเป็น/ส่วนตัว ออม = 100 − สองอย่างนั้น
+function customPct(){
+  const c=S.customPct||{need:50,want:30};
+  const need=clamp(fN(c.need),0,100), want=clamp(fN(c.want),0,100);
+  return {need,want,save:Math.max(0,100-need-want),over:need+want>100};
+}
+function setRule(id){
+  // กดกำหนดเองครั้งแรก: เริ่มจากสัดส่วนของหลักที่เลือกอยู่
+  if(id==='custom'&&!S.customPct){
+    const b=plan().buckets, sum=k=>b.filter(x=>x.kind===k).reduce((a,x)=>a+x.pct,0);
+    S.customPct={need:sum('need'),want:100-sum('need')-sum('save')};
+  }
+  S.planRule=id; ss(); uPlan();
+}
+function crEditor(){
+  const c=customPct();
+  return `<div class="cr-simple">
+    <label class="cr-f"><span>${ic('wallet')} จำเป็น</span><span class="cr-in"><input type="number" inputmode="decimal" min="0" max="100" value="${c.need}" oninput="crSet('need',this.value)"/>%</span></label>
+    <label class="cr-f"><span>${ic('bag')} ใช้ส่วนตัว</span><span class="cr-in"><input type="number" inputmode="decimal" min="0" max="100" value="${c.want}" oninput="crSet('want',this.value)"/>%</span></label>
+    <div class="cr-f cr-auto"><span>${ic('coins')} ออม / ลงทุน <small>(ที่เหลือ คิดให้เอง)</small></span><b id="cr-save">${c.save}%</b></div>
+    <div id="cr-sum"></div>
+  </div>`;
+}
+function crSet(k,v){
+  S.customPct={...customPct(),[k]:fN(v)}; delete S.customPct.save; delete S.customPct.over;
+  ss();
+  const c=customPct(); $('cr-save').textContent=c.save+'%';
+  uPlanRes();
 }
 
 function uPlan(){
   const el=$('plan-out');
   if(!el) return;
   const P=plan();
+  el.innerHTML=`<div class="rule-row" role="group" aria-label="หลักการแบ่งเงิน">${Object.entries(RULES).map(([id,r])=>
+    `<button class="rule ${id===P.id?'on':''}" onclick="setRule('${id}')">${r.name}</button>`).join('')}</div>
+    <div class="rule-who"><b>${P.rule.name}</b> · ${P.rule.who}<br>${P.rule.how}</div>
+    ${P.id==='custom'?`<div class="cr-box">${crEditor()}</div>`:''}
+    <div id="plan-res"></div>`;
+  uPlanRes();
+}
+function uPlanRes(){
+  const el=$('plan-res');
+  if(!el) return;
+  const P=plan();
+  const cs=$('cr-sum');
+  if(cs) cs.innerHTML=customPct().over?`<span class="cr-bad">${ic('alert')} จำเป็น + ใช้ส่วนตัว เกิน 100% แล้ว ลดลงหน่อย</span>`:'';
+  let h='';
   if(P.sal<=0){
-    el.innerHTML=`<div class="tip">
-      <span class="tip-i">${ic('bulb')}</span>
-      <div class="tip-t">ใส่เงินเดือน แอปจะแบ่งให้ตามหลักสากล <strong>50/30/20</strong> ว่าควรใช้จ่าย ออม และเก็บเงินฉุกเฉินเดือนละเท่าไหร่</div>
-    </div>`;
+    el.innerHTML=h+`<div class="tip"><span class="tip-i">${ic('bulb')}</span>
+      <div class="tip-t">ใส่เงินเดือนด้านบน แอปจะแบ่งให้ว่าแต่ละส่วนควรเป็นเดือนละเท่าไหร่</div></div>`;
     return;
   }
-  const pc=v=>Math.round(v/P.sal*100);
-  const row=(col,nm,ds,v)=>`<div class="plan-row">
-      <span class="plan-dot" style="background:${col}"></span>
-      <div class="plan-tx"><div class="plan-nm">${nm}</div><div class="plan-ds">${ds}</div></div>
-      <div class="plan-am"><div class="plan-v">${fW(v)} ฿</div><div class="plan-pc">${pc(v)}% · ต่อเดือน</div></div>
-    </div>`;
-  const goalSet=Math.round(fN(S.savingGoal))===Math.round(P.save*12);
-  let h=`<div class="plan">
-    <div class="plan-bar">
-      <span style="flex:50;background:var(--vc)"></span>
-      <span style="flex:30;background:var(--bl)"></span>
-      ${P.emergency>0?`<span style="flex:10;background:var(--a)"></span>`:''}
-      <span style="flex:${P.emergency>0?10:20};background:var(--g)"></span>
-    </div>
-    ${row('var(--vc)','ใช้จ่ายจำเป็น','ค่าเช่า อาหาร เดินทาง ค่าน้ำไฟ หนี้',P.needs)}
-    ${row('var(--bl)','ใช้ส่วนตัว','กินเที่ยว ช้อปปิ้ง งานอดิเรก',P.wants)}
-    ${P.emergency>0?row('var(--a)','เงินฉุกเฉิน','เก็บแยกไว้ยามป่วย ตกงาน ซ่อมรถ',P.emergency):''}
-    ${row('var(--g)','ออม / ลงทุน','เก็บเพื่อเป้าหมายระยะยาว',P.savings)}
-    <div class="plan-foot">ใช้จ่ายได้ประมาณ <strong>วันละ ${fW(P.daily)} ฿</strong> (จำเป็น + ส่วนตัว ÷ 30 วัน)</div>
+  h+=`<div class="plan">
+    ${P.fam>0?`<div class="plan-fam">${ic('family')} ให้ครอบครัวเดือนนี้ <b>${fW(P.fam)} ฿</b><span>หักออกก่อน เหลือแบ่งตามสัดส่วน ${fW(P.sal)} ฿</span></div>`:''}
+    <div class="plan-bar">${P.buckets.map(x=>`<span style="flex:${x.pct};background:${x.col}"></span>`).join('')}</div>
+    ${P.buckets.map(x=>`<div class="plan-row">
+      <span class="plan-dot" style="background:${x.col}"></span>
+      <div class="plan-tx"><div class="plan-nm">${x.name}</div><div class="plan-ds">${x.desc}</div></div>
+      <div class="plan-am"><div class="plan-v">${fW(x.amt)} ฿</div><div class="plan-pc">${x.pct}% · ต่อเดือน</div></div>
+    </div>`).join('')}
+    <div class="plan-foot">ใช้จ่ายได้ประมาณ <strong>วันละ ${fW(P.daily)} ฿</strong> (เงินเดือน − ส่วนออม/แบ่งปัน ÷ 30 วัน)</div>
   </div>`;
   const efPct=P.efTarget>0?clamp(P.ef/P.efTarget*100,0,100):0;
+  const goalSet=Math.round(fN(S.savingGoal))===Math.round(P.save*12);
   h+=`<div class="sc" style="margin-top:10px;padding:15px 16px">
     <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:9px">
       <span class="sc-lbl" style="margin:0">${ic('shield')} เป้าเงินฉุกเฉิน (6 เดือน)</span>
-      <span style="font-size:.95rem;font-weight:700;color:var(--t1)">${fW(P.efTarget)} ฿</span>
+      <span style="font-size:1rem;font-weight:700;color:var(--t1)">${fW(P.efTarget)} ฿</span>
     </div>
     <div class="pt" style="height:9px"><div class="pf" style="width:${efPct}%;height:9px;background:${P.efFull?'var(--g)':'var(--a)'}"></div></div>
     <div style="font-size:.88rem;color:var(--t2);margin-top:8px;line-height:1.55">${P.efFull
-      ?`มีครบแล้ว ${fW(P.ef)} ฿ ส่วนออม 20% ไปออม/ลงทุนได้ทั้งหมด`
-      :`มีแล้ว ${fW(P.ef)} ฿ · ถ้าเก็บเดือนละ ${fW(P.emergency)} ฿ จะครบในอีกประมาณ <strong style="color:var(--t1)">${P.months} เดือน</strong>`}</div>
+      ?`มีครบแล้ว ${fW(P.ef)} ฿ ส่วนออมทั้งหมดไปลงทุนต่อได้เลย`
+      :`มีแล้ว ${fW(P.ef)} ฿ · แนะนำใช้ครึ่งหนึ่งของส่วนออม (เดือนละ ${fW(P.emergency)} ฿) เติมก่อน จะครบในอีกประมาณ <strong style="color:var(--t1)">${P.months} เดือน</strong>`}</div>
   </div>
   <button class="plan-btn ${goalSet?'done':''}" ${goalSet?'disabled':''} onclick="usePlanGoal()">${goalSet
     ?`${ic('check')} เป้าเงินเก็บ/ปีตรงกับแผนแล้ว`
     :`${ic('target')} ตั้งเป้าเงินเก็บปีละ ${fW(P.save*12)} ฿ ตามแผน`}</button>
-  <div class="tip">
-    <span class="tip-i">${ic('bulb')}</span>
-    <div class="tip-t"><strong>หลัก 50/30/20</strong> เป็นแนวทางจัดเงินที่ใช้กันทั่วโลก ส่วน<strong>เงินฉุกเฉิน</strong>ควรมี 3–6 เดือนของค่าใช้จ่ายจำเป็น แอปตั้งเป้าไว้ 6 เดือน เป็นตัวเลขแนะนำ ปรับตามชีวิตจริงได้</div>
-  </div>`;
+  <div class="tip"><span class="tip-i">${ic('bulb')}</span>
+    <div class="tip-t">ทุกหลักใช้แนวเดียวกันคือ <strong>ออมก่อนใช้</strong> และ<strong>มีเงินฉุกเฉิน 3–6 เดือน</strong>ก่อนลงทุนเสี่ยง ถ้ามีหนี้ดอกเบี้ยสูง (บัตรเครดิต สินเชื่อ) ให้ปลดหนี้ก้อนนั้นก่อน</div></div>`;
   el.innerHTML=h;
 }
 
-// ส่วนออมรวม (เงินฉุกเฉิน + ออม) × 12 เดือน = เป้าเงินเก็บ/ปี
+// ส่วนออมรวม × 12 เดือน = เป้าเงินเก็บ/ปี
 function usePlanGoal(){
   S.savingGoal=String(Math.round(plan().save*12));
   ss();
@@ -2109,40 +2256,81 @@ function bindDatePicker(){
   }
 }
 
+/* รายการเพิ่มจากสลิปเดียวกัน: [{cat, note, amount}] */
+let XI=[];
+function addItem(){ readItems(); XI.push({cat:LCAT,note:'',amount:''}); renderItems(); }
+function readItems(){
+  document.querySelectorAll('#xi-list .xi').forEach((row,i)=>{
+    if(!XI[i]) return;
+    XI[i].cat=row.querySelector('select').value;
+    XI[i].note=row.querySelector('.xi-note').value;
+    XI[i].amount=row.querySelector('.xi-amt').value;
+  });
+}
+function renderItems(){
+  const el=$('xi-list');
+  if(!el) return;
+  el.innerHTML=XI.map((x,i)=>`<div class="xi">
+    <div class="xi-top"><span class="lf-n">${i+2}</span>
+      <select aria-label="ประเภท" onchange="sumItems()">${CATS.map(c=>`<option value="${c.id}" ${c.id===x.cat?'selected':''}>${c.name}</option>`).join('')}</select>
+      <input class="xi-amt" type="number" inputmode="decimal" min="0" placeholder="ราคา" value="${esc(x.amount)}" aria-label="ราคา" oninput="sumItems()"/>
+      <button class="ed-x" aria-label="ลบรายการนี้" onclick="readItems();XI.splice(${i},1);renderItems()">${ic('x')}</button>
+    </div>
+    <input class="xi-note" type="text" placeholder="ชื่อรายการ" value="${esc(x.note)}" aria-label="ชื่อรายการ"/>
+  </div>`).join('');
+  sumItems();
+}
+// รวมยอดทุกรายการ ไว้เทียบกับยอดในสลิป
+function sumItems(){
+  const el=$('xi-sum');
+  if(!el) return;
+  const amts=[fN($('la')?.value)].concat([...document.querySelectorAll('#xi-list .xi-amt')].map(i=>fN(i.value)));
+  const n=amts.filter(v=>v>0).length;
+  el.innerHTML=XI.length?`<div class="xi-total">${ic('receipt')} รวม ${n} รายการ = <b>${fmt(amts.reduce((a,v)=>a+v,0))} ฿</b><span>เทียบกับยอดรวมในสลิปว่าตรงไหม</span></div>`:'';
+}
+
 async function logS(){
+  readItems();
   const amt=parseFloat($('la')?.value);
   if(isNaN(amt)||amt<=0){
-    const i=$('la'); if(i){i.style.outline='2px solid var(--r)';setTimeout(()=>i.style.outline='',900);}
+    const i=$('la'); if(i){i.style.outline='2px solid var(--r)';i.focus();setTimeout(()=>i.style.outline='',900);}
     return;
   }
-  const note=$('ln')?.value.trim()||'';
-  const ds=todayISO();
+  const lines=[{cat:LCAT,note:$('ln')?.value.trim()||'',amount:amt}]
+    .concat(XI.filter(x=>fN(x.amount)>0).map(x=>({cat:x.cat,note:x.note.trim(),amount:fN(x.amount)})));
+  const ds=todayISO(), now=Date.now();
   if(!S.trackerStart) S.trackerStart=ds;
-  const entry={
-    id:Date.now(), date:ds, amount:amt, note, cat:LCAT,
-    ts:new Date().toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'})
-  };
-  if(pendingPhoto){
-    try{ await putPhoto(entry.id,pendingPhoto); entry.photo=true; pendingPhoto=null; }
-    catch(e){ alert('เก็บรูปไม่สำเร็จ รายการนี้จะบันทึกโดยไม่มีรูป'); }
+  const ts=new Date().toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'});
+  const made=[];
+  for(const [i,l] of lines.entries()){
+    const e={id:now+i, date:ds, amount:l.amount, note:l.note, cat:l.cat, ts};
+    // ทุกรายการจากสลิปเดียวกันเก็บสลิปไว้ด้วย
+    if(pendingPhotos.length){
+      try{ await savePhotos(e,pendingPhotos); }
+      catch(err){ alert('เก็บรูปไม่สำเร็จ รายการจะบันทึกโดยไม่มีรูป'); }
+    }
+    made.push(e);
   }
-  S.entries.unshift(entry);
-  ss(); queueSync(entry.id,'upsert'); ra();
+  S.entries.unshift(...made.reverse());
+  pendingPhotos=[]; XI=[];
+  ss(); made.forEach(e=>queueSync(e.id,'upsert')); ra();
 }
 
 let LCAT='food';   // หมวดที่เลือกไว้ในฟอร์มจด (จำค่าล่าสุดระหว่างใช้งาน)
 function pickCat(id){ LCAT=id; markChip($('log-cats'),id); }
 
 /* ตัวกรองประวัติ: ช่วงเวลา (ทั้งหมด/วัน/เดือน/ปี) + หมวด */
-const HF={mode:'all', day:todayISO(), month:todayISO().slice(0,7), year:todayISO().slice(0,4), cat:'all'};
+const HF={mode:'all', day:todayISO(), month:todayISO().slice(0,7), year:todayISO().slice(0,4), cat:'all', q:''};
 function histMatch(e){
+  const q=(HF.q||'').trim().toLowerCase();
+  if(q && !`${e.note||''} ${catOf(e).name} ${e.amount}`.toLowerCase().includes(q)) return false;
   if(HF.cat!=='all' && catOf(e).id!==HF.cat) return false;
   if(HF.mode==='day')   return e.date===HF.day;
   if(HF.mode==='month') return e.date.startsWith(HF.month);
   if(HF.mode==='year')  return e.date.startsWith(HF.year);
   return true;
 }
-function setHF(k,v){ HF[k]=v; rTrack(); }
+function setHF(k,v){ HF[k]=v; renderHist(); }
 function histFilter(){
   const seg=[['all','ทั้งหมด'],['day','วัน'],['month','เดือน'],['year','ปี']]
     .map(([m,l])=>`<button class="${HF.mode===m?'on':''}" onclick="setHF('mode','${m}')">${l}</button>`).join('');
@@ -2162,51 +2350,53 @@ function histFilter(){
     <div class="seg" role="group" aria-label="ช่วงเวลา">${seg}</div>${pick}
     <div class="hf-cats" role="group" aria-label="หมวดหมู่">${cats}</div>
     <div class="hf-sum">พบ <strong>${list.length}</strong> รายการ · รวม <strong>${fmt(list.reduce((a,e)=>a+e.amount,0))} ฿</strong></div>
-    ${active?`<button class="btn2" onclick="HF.mode='all';HF.cat='all';rTrack()">ล้างตัวกรอง</button>`:''}
+    ${active?`<button class="btn2" onclick="HF.mode='all';HF.cat='all';renderHist()">ล้างตัวกรอง</button>`:''}
   </div></details>`;
 }
 
-/* แก้ไขรายการ: เงิน บันทึก หมวด วันที่ รูป — แล้วส่งเข้าชีตใหม่ */
-let ED=null;   // {id, cat, photo:'keep'|'remove'|Blob}
+/* แก้ไขรายการ: เงิน บันทึก หมวด วันที่ สลิป — แล้วส่งเข้าชีตใหม่ */
+let ED=null;   // {id, cat, list:[Blob|null], changed}
 async function openEdit(id){
   const e=S.entries.find(x=>x.id===id);
   if(!e) return;
-  ED={id, cat:catOf(e).id, photo:'keep'};
+  ED={id, cat:catOf(e).id, list:await getPhotos(e), changed:false};
   $('ed-box').innerHTML=`
     <div class="ed-h"><span>แก้ไขรายการ</span><button class="ed-x" aria-label="ปิด" onclick="closeEdit()">${ic('x')}</button></div>
-    <div><label class="ed-l" for="ed-amt">จำนวนเงิน (บาท)</label>
+    <div><span class="ed-l">ประเภท</span><div id="ed-cats">${catChips(ED.cat,'edCat')}</div></div>
+    <div><label class="ed-l" for="ed-note">ชื่อรายการ</label>
+      <input id="ed-note" class="hf-pick" type="text" value="${esc(e.note)}" placeholder="เช่น ยิม, ค่าเน็ต"/></div>
+    <div><span class="ed-l">สลิป</span><div class="ed-ph" id="ed-ph"></div></div>
+    <div><label class="ed-l" for="ed-amt">ราคา (บาท)</label>
       <input id="ed-amt" class="hf-pick" type="number" inputmode="decimal" min="0" value="${e.amount}"/></div>
-    <div><label class="ed-l" for="ed-note">บันทึกย่อ</label>
-      <input id="ed-note" class="hf-pick" type="text" value="${esc(e.note)}" placeholder="เช่น ข้าวกลางวัน"/></div>
-    <div><span class="ed-l">หมวดหมู่</span><div id="ed-cats">${catChips(ED.cat,'edCat')}</div></div>
     <div><label class="ed-l" for="ed-date">วันที่</label>
       <input id="ed-date" class="hf-pick" type="date" value="${e.date}"/></div>
-    <div><span class="ed-l">รูปใบเสร็จ</span><div class="ed-ph" id="ed-ph"></div></div>
     <div class="ed-btns">
       <button class="btn2" style="justify-content:center" onclick="closeEdit()">ยกเลิก</button>
       <button class="set-btn" onclick="saveEdit()">${ic('check')} บันทึก</button>
     </div>`;
   $('editor').hidden=false;
-  await edPhotoRow();
+  edPhotoRow();
 }
 function edCat(id){ ED.cat=id; markChip($('ed-cats'),id); }
-async function edPhotoRow(){
-  const el=$('ed-ph'), e=S.entries.find(x=>x.id===ED.id);
-  if(!el||!e) return;
-  if(el._url){ URL.revokeObjectURL(el._url); el._url=null; }
-  let blob=ED.photo instanceof Blob?ED.photo:null;
-  if(ED.photo==='keep'&&e.photo){ try{ blob=await getPhoto(e.id); }catch(_){} }
-  const has=ED.photo instanceof Blob||(ED.photo==='keep'&&e.photo);
-  if(blob){ el._url=URL.createObjectURL(blob); }
-  el.innerHTML=`${el._url?`<img src="${el._url}" alt="รูปใบเสร็จ"/>`:has?`<span class="set-p">มีรูปใน Google Drive</span>`:''}
-    <label class="btn2">${ic('camera')} ${has?'เปลี่ยนรูป':'แนบรูป'}
-      <input type="file" accept="image/*" hidden onchange="edPick(this)"/></label>
-    ${has?`<button class="btn2" onclick="ED.photo='remove';edPhotoRow()">${ic('trash')} เอารูปออก</button>`:''}`;
+function edPhotoRow(){
+  const el=$('ed-ph');
+  if(!el||!ED) return;
+  (el._urls||[]).forEach(u=>URL.revokeObjectURL(u));
+  el._urls=[];
+  // รูปที่ไม่มีในเครื่องนี้ (อยู่แค่ใน Drive) แก้จากเครื่องนี้ไม่ได้ กันรูปหาย
+  const locked=ED.list.some(b=>!b);
+  el.innerHTML=ED.list.map((b,i)=>{
+    if(!b) return `<span class="set-p">รูปที่ ${i+1} อยู่ใน Google Drive</span>`;
+    const u=URL.createObjectURL(b); el._urls.push(u);
+    return `<span class="ph-th"><img src="${u}" alt="สลิป ${i+1}"/>${locked?'':`<button aria-label="เอารูปนี้ออก" onclick="ED.list.splice(${i},1);ED.changed=true;edPhotoRow()">${ic('x')}</button>`}</span>`;
+  }).join('')+(locked?'':`<label class="btn2">${ic('camera')} เพิ่มสลิป
+      <input type="file" accept="image/*" multiple hidden onchange="edPick(this)"/></label>`);
 }
 async function edPick(inp){
-  const f=inp.files&&inp.files[0]; inp.value='';
-  if(!f) return;
-  try{ ED.photo=await shrinkImage(f); }catch(_){ alert('เปิดรูปนี้ไม่ได้ ลองเลือกรูปอื่น'); }
+  const fs=[...(inp.files||[])]; inp.value='';
+  for(const f of fs){
+    try{ ED.list.push(await shrinkImage(f)); ED.changed=true; }catch(_){ alert('เปิดรูปบางรูปไม่ได้ ลองเลือกรูปอื่น'); }
+  }
   edPhotoRow();
 }
 function closeEdit(){ $('editor').hidden=true; ED=null; }
@@ -2216,13 +2406,9 @@ async function saveEdit(){
   const amt=parseFloat($('ed-amt').value), date=$('ed-date').value;
   if(isNaN(amt)||amt<=0){ $('ed-amt').style.outline='2px solid var(--r)'; return; }
   if(!/^\d{4}-\d{2}-\d{2}$/.test(date)){ $('ed-date').style.outline='2px solid var(--r)'; return; }
-  // รูปเปลี่ยน: รูปเดิมใน Drive ย้ายไปถังขยะ แล้วส่งรูปใหม่รอบหน้า
-  const dropDrive=()=>{ if(SY.photoFiles[e.id]){ SY.photoTrash.push(SY.photoFiles[e.id]); delete SY.photoFiles[e.id]; sySave(); } };
-  if(ED.photo instanceof Blob){
-    try{ await putPhoto(e.id,ED.photo); e.photo=true; dropDrive(); }
+  if(ED.changed){
+    try{ await savePhotos(e,ED.list.filter(Boolean)); }
     catch(_){ alert('เก็บรูปไม่สำเร็จ ข้อมูลอื่นบันทึกแล้ว'); }
-  } else if(ED.photo==='remove'&&e.photo){
-    delPhoto(e.id).catch(()=>{}); delete e.photo; dropDrive();
   }
   e.amount=amt; e.note=$('ed-note').value.trim(); e.cat=ED.cat; e.date=date;
   ss(); queueSync(e.id,'upsert'); closeEdit(); ra();
@@ -2231,10 +2417,7 @@ async function saveEdit(){
 function delE(id){
   const e=S.entries.find(x=>x.id===id);
   S.entries=S.entries.filter(e=>e.id!==id);
-  if(e&&e.photo){
-    delPhoto(id).catch(()=>{});
-    if(SY.photoFiles[id]){ SY.photoTrash.push(SY.photoFiles[id]); delete SY.photoFiles[id]; sySave(); }
-  }
+  if(e) dropPhotos(e);
   ss(); queueSync(id,'delete'); ra();
 }
 
@@ -2321,7 +2504,7 @@ const GUIDE_URL='https://github.com/suvijak1yangdiew/html-to-link/blob/main/ค�
 const SYK='bapp_sheet';
 const SY_DFLT={url:'',lastSyncAt:null,outbox:{},photoFiles:{},photoTrash:[]};
 let SY={...SY_DFLT};
-let syncErr=false, photoErr=null, syncing=null, syncTimer=null, pendingPhoto=null, setMsg=null;
+let syncErr=false, photoErr=null, syncing=null, syncTimer=null, pendingPhotos=[], setMsg=null;
 
 function sySave(){ try{ localStorage.setItem(SYK,JSON.stringify(SY)); }catch(e){} }
 function syLoad(){ try{ const r=localStorage.getItem(SYK); if(r) SY={...SY_DFLT,...JSON.parse(r)}; }catch(e){} }
@@ -2372,31 +2555,55 @@ async function shrinkImage(file){
   } finally { URL.revokeObjectURL(url); }
 }
 
+const nPh   = e => e.photos || (e.photo?1:0);
+const phKey = (id,k) => k ? `${id}_${k}` : String(id);
+const phKeys= e => Array.from({length:nPh(e)},(_,k)=>phKey(e.id,k));
+const getPhotos = e => Promise.all(phKeys(e).map(k=>getPhoto(k).catch(()=>null)));
+// ลบรูปของรายการ: ในเครื่อง และย้ายไฟล์ใน Drive ไปถังขยะ
+function dropPhotos(e){
+  phKeys(e).forEach(k=>{
+    delPhoto(k).catch(()=>{});
+    if(SY.photoFiles[k]){ SY.photoTrash.push(SY.photoFiles[k]); delete SY.photoFiles[k]; }
+  });
+  sySave(); delete e.photo; delete e.photos;
+}
+// แทนรูปทั้งหมดของรายการด้วยชุดใหม่
+async function savePhotos(e,blobs){
+  dropPhotos(e);
+  for(const [k,b] of blobs.entries()) await putPhoto(phKey(e.id,k),b);
+  if(blobs.length){ e.photo=true; e.photos=blobs.length; }
+}
+
 async function pickPhoto(inp){
-  const f=inp.files&&inp.files[0]; inp.value='';
-  if(!f) return;
-  try{ pendingPhoto=await shrinkImage(f); }
-  catch(e){ pendingPhoto=null; alert('เปิดรูปนี้ไม่ได้ ลองเลือกรูปอื่น'); }
+  const fs=[...(inp.files||[])]; inp.value='';
+  for(const f of fs){
+    try{ pendingPhotos.push(await shrinkImage(f)); }
+    catch(e){ alert('เปิดรูปบางรูปไม่ได้ ลองเลือกรูปอื่น'); }
+  }
   showPick();
 }
 function showPick(){
   const el=$('lp-prev');
   if(!el) return;
-  if(el._url){ URL.revokeObjectURL(el._url); el._url=null; }
-  if(pendingPhoto){
-    el._url=URL.createObjectURL(pendingPhoto);
-    el.innerHTML=`<img src="${el._url}" alt="รูปที่แนบ"/><button aria-label="เอารูปออก" onclick="pendingPhoto=null;showPick()">${ic('x')}</button>`;
-  } else { el.innerHTML=''; }
+  (el._urls||[]).forEach(u=>URL.revokeObjectURL(u));
+  el._urls=pendingPhotos.map(b=>URL.createObjectURL(b));
+  el.innerHTML=el._urls.map((u,i)=>`<span class="ph-th"><img src="${u}" alt="สลิป ${i+1}"/><button aria-label="เอารูปนี้ออก" onclick="pendingPhotos.splice(${i},1);showPick()">${ic('x')}</button></span>`).join('')
+    +(pendingPhotos.length?`<span class="ph-n">${pendingPhotos.length} รูป</span>`:'');
 }
 
-const driveUrl=id=>SY.photoFiles[id]?`https://drive.google.com/file/d/${SY.photoFiles[id]}/view`:'';
+const driveUrl=k=>SY.photoFiles[k]?`https://drive.google.com/file/d/${SY.photoFiles[k]}/view`:'';
 async function openPhoto(id){
-  const img=$('vw-img'), empty=$('vw-empty'), a=$('vw-drive');
-  let blob=null; try{ blob=await getPhoto(id); }catch(e){}
-  if(img._url){ URL.revokeObjectURL(img._url); img._url=null; }
-  if(blob){ img._url=URL.createObjectURL(blob); img.src=img._url; }
-  img.hidden=!blob; empty.hidden=!!blob;
-  const d=driveUrl(id); a.hidden=!d; if(d) a.href=d;
+  const e=S.entries.find(x=>x.id===id);
+  if(!e) return;
+  const el=$('vw-list'), keys=phKeys(e), blobs=await getPhotos(e);
+  (el._urls||[]).forEach(u=>URL.revokeObjectURL(u));
+  el._urls=[];
+  el.innerHTML=keys.map((k,i)=>{
+    const d=driveUrl(k), b=blobs[i];
+    let img=`<div class="vw-empty">รูปที่ ${i+1} ไม่ได้อยู่ในเครื่องนี้</div>`;
+    if(b){ const u=URL.createObjectURL(b); el._urls.push(u); img=`<img src="${u}" alt="สลิป ${i+1}"/>`; }
+    return `<div class="vw-item">${img}${d?`<a class="vw-link" href="${d}" target="_blank" rel="noopener">${ic('link')} เปิดรูปที่ ${i+1} ใน Google Drive</a>`:''}</div>`;
+  }).join('');
   $('viewer').hidden=false;
 }
 function closeViewer(){ $('viewer').hidden=true; }
@@ -2405,7 +2612,7 @@ function closeViewer(){ $('viewer').hidden=true; }
 function sheetRow(e){
   return {
     id:String(e.id), date:e.date, time:e.ts||'', amount:e.amount, note:e.note||'', category:catOf(e).name,
-    hasPhoto:!!e.photo, photoUrl:e.photo?driveUrl(e.id):'',
+    hasPhoto:nPh(e)>0, photoUrl:driveUrl(phKey(e.id,0)), photoUrls:phKeys(e).map(driveUrl).filter(Boolean),
     createdAt:new Date(e.id).toISOString(),
   };
 }
@@ -2417,19 +2624,19 @@ function sheetSummary(){
     ['เงินเก็บ/ห้ามแตะ (บาท)', fN(S.reqSavings)],
     ['วันเงินเดือนเข้า', S.salaryDate||''],
     ['วันที่เหลือถึงเงินเดือน', t.drem||0],
-    ['งบใช้ได้ต่อวัน (บาท)', Math.round(t.daily)],
-    ['งบใหม่ต่อวัน หลังหักที่ใช้ไป (บาท)', Math.round(t.newDaily)],
-    ['ใช้ไปแล้วรอบนี้ (บาท)', t.total],
-    ['เงินคงเหลือก่อนเงินเดือน (บาท)', Math.round(t.rem)],
+    ['ใช้ได้วันละ ตอนนี้ (บาท)', Math.round(t.daily)],
+    ['ใช้ไปแล้ว หลังใส่ยอดเงินล่าสุด (บาท)', t.used],
+    ['เงินเหลือใช้ก่อนเงินเดือน (บาท)', Math.round(t.rem)],
     ['เป้าเงินเก็บต่อปี (บาท)', fN(S.savingGoal)],
     ['ออมแล้ว (บาท)', fN(S.savedAmount)],
+    ['พอร์ตลงทุนตอนนี้ (บาท)', fN(S.portValue)],
   ].concat(P.sal>0?[
-    ['เงินเดือน (บาท)', P.sal],
-    ['แผน 50/30/20: ใช้จ่ายจำเป็น/เดือน (บาท)', Math.round(P.needs)],
-    ['แผน 50/30/20: ใช้ส่วนตัว/เดือน (บาท)', Math.round(P.wants)],
-    ['แผน 50/30/20: เงินฉุกเฉิน/เดือน (บาท)', Math.round(P.emergency)],
-    ['แผน 50/30/20: ออม/ลงทุน/เดือน (บาท)', Math.round(P.savings)],
+    ['เงินเดือน (บาท)', P.gross],
+    ['ให้ครอบครัวเดือนนี้ (บาท)', P.fam],
+    ['หลักการแบ่งเงิน', P.rule.name],
+    ...P.buckets.map(x=>[`แผน ${P.rule.name}: ${x.name} ${x.pct}%/เดือน (บาท)`, Math.round(x.amt)]),
     ['เงินฉุกเฉินที่มี (บาท)', P.ef],
+
     ['เป้าเงินฉุกเฉิน 6 เดือน (บาท)', Math.round(P.efTarget)],
   ]:[]);
 }
@@ -2450,7 +2657,7 @@ const blobB64=b=>new Promise((res,rej)=>{
   fr.onerror=()=>rej(fr.error);
   fr.readAsDataURL(b);
 });
-const photosWaiting=()=>S.entries.filter(e=>e.photo&&!SY.photoFiles[e.id]).length;
+const photosWaiting=()=>S.entries.reduce((a,e)=>a+phKeys(e).filter(k=>!SY.photoFiles[k]).length,0);
 
 function queueSync(id,op){
   if(!SY.url) return;
@@ -2480,14 +2687,14 @@ async function sendOutbox(){
 }
 async function syncPhotos(){
   let n=0;
-  for(const e of S.entries){
-    if(!e.photo||SY.photoFiles[e.id]) continue;
-    const blob=await getPhoto(e.id);
+  for(const e of S.entries) for(const k of phKeys(e)){
+    if(SY.photoFiles[k]) continue;
+    const blob=await getPhoto(k);
     if(!blob) continue;
-    const r=await send({action:'uploadPhoto',id:String(e.id),date:e.date,
+    const r=await send({action:'uploadPhoto',id:k,date:e.date,
       type:blob.type||'image/jpeg',data:await blobB64(blob)},60000);
     if(!r.fileId) throw new Error('unsupported');
-    SY.photoFiles[e.id]=r.fileId;
+    SY.photoFiles[k]=r.fileId;
     SY.outbox[e.id]={op:'upsert',at:Date.now()};   // อัปเดตแถวให้มีลิงก์รูป
     sySave(); n++;
   }
@@ -2625,7 +2832,7 @@ function rSettings(typed=''){
     </div>`;
   } else {
     const pend=Object.keys(SY.outbox).length, ph=photosWaiting();
-    const withPh=S.entries.filter(e=>e.photo).length;
+    const withPh=S.entries.reduce((a,e)=>a+nPh(e),0);
     const line=(cls,icon,t)=>`<div class="sync-line ${cls}">${ic(icon)}<span>${t}</span></div>`;
     let lines=line('', 'cloud', SY.lastSyncAt?`ส่งล่าสุดเมื่อ ${thaiDT(SY.lastSyncAt)}`:'ยังไม่ได้ส่ง');
     lines+=pend
