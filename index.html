@@ -2246,15 +2246,23 @@ function monthlyDue(day,plus=0){
 // ── กยศ: สัดส่วนเงินต้นแต่ละปี 15 งวด รวม 100% ครบกำหนดทุกวันที่ 5 ก.ค.
 const KYS_PCT=[1.5,2.5,3,3.5,4,4.5,5,6,7,8,9,10,11,12,13];
 const KYS_URL='https://www.studentloan.or.th/';
-// ดอกเบี้ยแต่ละงวด = อัตราต่อปี × เงินต้นที่ค้างหลังจ่ายงวดก่อน (งวดแรกไม่รวมดอกเบี้ย)
-// ตรวจกับตัวเลขในแอป กยศ แล้ว: วงเงิน 14,400 ที่ 1% ได้ดอกเบี้ยรวม 1,335.60
+// สัดส่วนปีของช่วงวันที่ แบบที่ กยศ ใช้: แต่ละวันคิด 1/365 หรือ 1/366 ตามปีของวันนั้น
+function yearFrac(a,b){
+  let f=0;
+  for(const d=new Date(a+'T00:00:00'), e=new Date(b+'T00:00:00'); d<e; d.setDate(d.getDate()+1)){
+    const y=d.getFullYear(); f+=1/((y%4===0&&y%100!==0)||y%400===0?366:365);
+  }
+  return f;
+}
+// ดอกเบี้ยแต่ละงวด = เงินต้นที่ค้างหลังจ่ายงวดก่อน × อัตราต่อปี × จำนวนวันระหว่างงวด (งวดแรกไม่รวมดอกเบี้ย)
+// ตรวจกับแอป กยศ แล้วตรงทุกสตางค์: 14,400 ที่ 1% ดอกเบี้ยรวม 1,335.67 · 194,400 ที่ 0.75% รวม 13,523.55
 function kysSched(a){
   const P=fN(a.amount), rate=fN(a.rate===''||a.rate==null?1:a.rate)/100, y0=fN(a.startYear)-543;
   let bal=P;
   return KYS_PCT.map((pct,k)=>{
     const prin=k===KYS_PCT.length-1?r2(bal):r2(P*pct/100);
-    const int=k===0?0:r2(bal*rate);
-    const row={k,pct,due:`${y0+k}-07-05`,prin,int,total:r2(prin+int)};
+    const due=`${y0+k}-07-05`, int=k===0?0:r2(bal*rate*yearFrac(`${y0+k-1}-07-05`,due));
+    const row={k,pct,due,prin,int,total:r2(prin+int)};
     bal=r2(bal-prin); row.after=bal;
     return row;
   });
@@ -2491,6 +2499,17 @@ function debtSave(i){
   if(type==='kys'&&fN(d.startYear)<2500){ $('d-startYear').style.outline='2px solid var(--r)'; return; }
   // กยศ ไม่ได้ใส่จำนวนงวดที่จ่ายแล้ว: นับงวดที่เลยกำหนดไปแล้วว่าจ่ายแล้ว
   if(type==='kys'&&d.paid==='') d.paid=String(kysSched(d).filter(r=>r.due<todayISO()).length);
+  // ใส่ยอดจริงงวดถัดไปไว้: หาอัตราดอกเบี้ยย้อนจากยอดนั้น (ดอกเบี้ย = ยอดจริง − เงินต้นงวดนี้)
+  if(type==='kys'&&fN(d.actual)>0){
+    const sc=kysSched(d), k=Math.round(fN(d.paid));
+    if(k>0&&sc[k]){
+      const rate=+((fN(d.actual)-sc[k].prin)/(sc[k-1].after*yearFrac(sc[k-1].due,sc[k].due))*100).toFixed(4);
+      if(rate>0&&rate<20&&Math.abs(rate-fN(d.rate||1))>0.005){
+        d.rate=String(rate);
+        alert(`ปรับดอกเบี้ยเป็น ${rate}% ต่อปี ให้ตรงกับยอดจริงจากแอป กยศ แล้ว`);
+      }
+    }
+  }
   if(i>=0) debtList()[i]=d; else debtList().push(d);
   ss(); rDebt(); rHome(); renderHdr();
   if(type==='kys') closeEdit(); else debtTable(i>=0?i:debtList().length-1);
